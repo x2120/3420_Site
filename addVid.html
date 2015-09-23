@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Add Video</title>
+  <meta name="description"  content="The login page for the website">
+
+</head>
+
+<body id="Survey_example" class="doc_body">
+<img src="movie-reel.jpg" alt="Mountain View" style="width:100px;height:80px;">   
+<h1>MyVid Collection</h1>
+<p>An individual Video Libary</p>
+	<ul>
+	<li><a href="index.html">Home				</a>	</li>
+	<li><a href="register.html">Create Account	</a>	</li>
+	<li><a href="profile.html">Edit Account		</a>	</li>
+	<li><a href="leave.php">Delete Account	</a>	</li>
+	<li><a href="addVid.html">Add Video		</a>	</li>
+	<li><a href="editVid.html">Edit Video		</a>	</li>
+	<li><a href="deleteVid.php">Delete Video		</a>	</li>
+	<li><a href="search.html">Search			</a>	</li>
+	<li><a href="displayDetails.html">Display Details	</a>	</li>
+	<li><a href="login.html">Login			</a>	</li>
+	<li><a href="logout.php">Logout			</a>	</li>
+	<li><a href="search.html">Search			</a>	</li>
+
+	</ul>
+<!--Title of Movie-->
+<li><label for="Mtitle">Title:</label> <input type="textboxes" value ="" name="MTitle" /></li>
+<!--Rating system-->
+<li>Rating:
+<select name="Rating" id="Rating" onchange="" size="1">
+    <option value="01">1</option>
+    <option value="02">2</option>
+    <option value="03">3</option>
+    <option value="04">4</option>
+    <option value="05">5</option>
+    <option value="06">6</option>
+    <option value="07">7</option>
+    <option value="08">8</option>
+    <option value="09">9</option>
+    <option value="10">10</option>
+</select>
+</li>
+<!--Genre of Movie-->
+<li>Genre:
+<select name="Rating" id="Rating" onchange="" size="1">
+    <option value="01">Action</option>
+    <option value="02">Adventure</option>
+    <option value="03">Animation</option>
+    <option value="04">Comedy</option>
+    <option value="05">Crime</option>
+    <option value="06">Documentary</option>
+    <option value="07">Drama</option>
+    <option value="08">Family</option>
+    <option value="09">Fantasy</option>
+    <option value="10">History</option>
+    <option value="11">Horror</option>
+	<option value="12">Music</option>
+    <option value="13">Mystery</option>
+    <option value="14">Romance</option>
+    <option value="15">Sci-Fi</option>
+    <option value="16">Sport</option>
+    <option value="17">Thriller</option>	
+    <option value="18">War</option>	
+    <option value="19">Western</option>	
+</select>
+</li>
+<li>
+<!--MPAA Raiting-->
+<label for="Rating">MPAA Raiting </label>
+              <input type="checkbox" name="Rating[]" value ="1" /> G
+              <input type="checkbox" name="Rating[]" value ="2" /> PG
+              <input type="checkbox" name="Rating[]" value ="3" /> PG-13
+              <input type="checkbox" name="Rating[]" value ="4" /> R
+              <input type="checkbox" name="Rating[]" value ="5" /> NC-17
+			 
+<li>
+<!--Year Movie Release-->
+<li><label for="Year">Year:</label> <input type="textboxes" value ="" name="Year" /></li>
+<!--Run Time-->
+<li><label for="RTime">Run Time:</label> <input type="textboxes" value ="" name="Runtime" /></li>
+<!--Theater Release-->
+<li><label for="TRelease">Theatre Release:</label> <input type="textboxes" value ="" name="TRelease" /></li>
+<!--DVD-->
+<li><label for="DRelease">DVD Release:</label> <input type="textboxes" value ="" name="DRelease" /></li>
+<!--Actors-->
+<li><label for="Actors">Actors:</label> <input type="textboxes" value ="" name="Actors" /></li>
+<!--IMG Upload-->
+<li>cover:<input type="Button" value ="Choose File" name="save" /></li>
+<!--Studio-->
+<li><label for="Studio">Studio:</label> <input type="textboxes" value ="" name="Studio" /></li>
+<!--Plot-->
+<li><label for="Plot">Plot Summary:</label> <input type="textboxes" value ="" name="Plot" /></li>
+<!--Video Type-->
+<li>
+<label for="genre">Video Type </label>
+              <input type="checkbox" name="VType[]" value ="1" /> DVD
+              <input type="checkbox" name="VType[]" value ="2" />  BluRay
+              <input type="checkbox" name="VType[]" value ="3" /> Digital SD
+              <input type="checkbox" name="VType[]" value ="4" />Digital HD
+              <input type="checkbox" name="VType[]" value ="5" /> 3D
+			  <p/>
+<li>
+
+
+<p>
+<!--Buttons-->
+<input type="Button" value ="Save" name="Add Video" />
+<input type="RESET" value ="Reset" name="reset" />
+</p>
+
+      </form>
+
+  </div><!-- end survey form -->
+
+ </body>
+</html>
