@@ -18,19 +18,23 @@ body {
 	border-radius: 8px;
 }
 
-
 /*Logo positioning and basic modifications*/
 .toplogo {
-    position:absolute;
+    
     left: 25px;
     height: 100px;
     width: 1015px;
 
     background-color: rgb(241, 239, 223); 
+
+    clear: both;
 }
 
 /*Logo specific modifications*/
 .toplogo > img {
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 6px;
 	border: 4px solid rgb(158, 192, 171);
 	border-radius: 5px;
 }
@@ -38,8 +42,11 @@ body {
 /*Header info*/
 .tophead {
     position:absolute;
-    left:100px; right:0;
+    top: 20px;
+    left:100px;
     height: 100px;
+
+
 }
 
 .tophead > h1 {
