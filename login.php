@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <!-- Head and meta info -->
@@ -10,8 +9,8 @@
     
     <div class="tophead">
         <meta charset="utf-8">
-        <title>Profile</title>
-        <meta name="User profile" content="Contains user info and options to change">
+        <title>Login</title>
+        <meta name="User login" content="The login page for the website">
 
         <h1>MyVid Collection</h1>
         <p>An individual Video Libary</p><br>
@@ -37,18 +36,18 @@
 </div>
 
 
-</div>
-<li><label for="Password">Change Password:</label> <input type="textboxes" value ="" name="Password" /></li>
-<li><label for="Verification">Password Verification:</label> <input type="textboxes" value ="" name="Verification" /></li>
-<li><label for="Email">Email:</label> <input type="textboxes" value ="" name="Email" /></li>
-
-<p>
-<input type="Button" value ="Save" name="save" />
+<label for="UserName">User Name:</label> <input type="textboxes" value ="" name="UserName" />
 </p>
 
-	</form>
+<label for="Password">Password:</label> <input type="textboxes" value ="" name="Password" />
+<p>
+<input type="Button" value ="Login" name="login" />
+<input type="RESET" value ="Reset" name="reset" />
+</p>
 
-	</div><!-- end survey form -->
+      </form>
+
+</div><!-- end survey form -->
 
 </body>
 </html>
