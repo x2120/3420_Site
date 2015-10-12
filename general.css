@@ -6,7 +6,6 @@ body {
 	background-color: rgb(66, 52, 89);
 }
 
-<<<<<<< HEAD
 /*Center of website*/
 .center {
 	position: absolute;
@@ -21,7 +20,7 @@ body {
 
 /*Logo positioning and basic modifications*/
 .toplogo {
-    position: ab;
+    position: absolute;
     left: 25px;
     height: 100px;
     width: 1015px;
