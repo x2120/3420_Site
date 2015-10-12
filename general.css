@@ -126,6 +126,20 @@ Buttons
 	font-weight: bold;
 }
 
+
+.grid {
+width: 100px;
+height: 150px;
+background-color:#EFEFEF;
+}
+
+.Bicon
+{
+width: 25px;
+height: 25px;
+background-color:#EFEFEF;
+}
+
 /*----------------------------------------------------------
 Form positioning
 ----------------------------------------------------------*/
