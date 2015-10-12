@@ -3,111 +3,116 @@
 <!-- Head and meta info -->
 <head>
     <link type='text/css' rel='stylesheet' href='general.css' />
+
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <meta name="User registration" content="User register page for new account">
+
+</head>
+
+<body>
+<div class='center'>
+
     <div class="toplogo">
         <img src="movie-reel.jpg" alt="Mountain View" style="width:100px;height:80px;">
     </div>
     
     <div class="tophead">
-        <meta charset="utf-8">
-        <title>Registration</title>
-        <meta name="User registration" content="User register page for new account">
-
-        <h1>MyVid Collection</h1>
+        <h1><span ID='logoColor'>MyVid</span> Collection</h1>
         <p>An individual Video Libary</p><br>
     </div>
-<head>
 
-<!-- Left sidebar and site navigation -->
-<div class='left'>
-    <br>
-    <ul>
-        <a href="index.html"><li class='button'>Home</li></a>
-        <a href="register.html"><li class='button'>Create Account</li></a>
-        <a href="profile.html"><li class='button'>Edit Account</li></a>
-        <a href="leave.php"><li class='button'>Delete Account</li></a>
-        <a href="addVid.html"><li class='button'>Add Video</li></a>
-        <a href="editVid.html"><li class='button'>Edit Video</li></a>
-        <a href="deleteVid.php"><li class='button'>Delete Video</li></a>
-        <a href="search.html"><li class='button'>Search</li></a>
-        <a href="displayDetails.html"><li class='button'>Display Details</li></a>
-        <a href="login.html"><li class='button'>Login</li></a>
-        <a href="logout.php"><li class='button' ID='inv_button'>Logout</li></a>
-    </ul>
-</div>
+    <!-- Left sidebar and site navigation -->
+    <div class='left'>
+        <br>
+        <ul>
+            <a href="index.html"><li class='button'>Home</li></a>
+            <a href="register.html"><li class='button'>Create Account</li></a>
+            <a href="profile.html"><li class='button'>Edit Account</li></a>
+            <a href="leave.php"><li class='button'>Delete Account</li></a>
+            <a href="addVid.html"><li class='button'>Add Video</li></a>
+            <a href="editVid.html"><li class='button'>Edit Video</li></a>
+            <a href="deleteVid.php"><li class='button'>Delete Video</li></a>
+            <a href="search.html"><li class='button'>Search</li></a>
+            <a href="displayDetails.html"><li class='button'>Display Details</li></a>
+            <a href="login.html"><li class='button'>Login</li></a>
+            <a href="logout.php"><li class='button' ID='inv_button'>Logout</li></a>
+        </ul>
+    </div>
 
+    <div class = 'register'>
+        <li><label for="UserName">User Name:</label> <input type="textboxes" value ="" name="UserName" /></li>
+        <li><label for="Password">Password:</label> <input type="textboxes" value ="" name="Password" /></li>
+        <li><label for="Verification">Password Verification:</label> <input type="textboxes" value ="" name="Verification" /></li>
+        <li><label for="Email">Email:</label> <input type="textboxes" value ="" name="Email" /></li>
+        <!-- Year dropdown -->
+        <select name="year" id="year">
+        	<?PHP for($i=date("Y"); $i<=date("Y")+2; $i++)
+        		  	if($year == $i)
+        				echo "<option value='$i' selected>$i</option>";
+        			else
+        				echo "<option value='$i'>$i</option>";
+        	?>
+        </select>
+        	<!-- Month dropdown -->
+        <select name="month" id="month" onchange="" size="1">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
 
-<li><label for="UserName">User Name:</label> <input type="textboxes" value ="" name="UserName" /></li>
-<li><label for="Password">Password:</label> <input type="textboxes" value ="" name="Password" /></li>
-<li><label for="Verification">Password Verification:</label> <input type="textboxes" value ="" name="Verification" /></li>
-<li><label for="Email">Email:</label> <input type="textboxes" value ="" name="Email" /></li>
-<!-- Year dropdown -->
-<select name="year" id="year">
-	<?PHP for($i=date("Y"); $i<=date("Y")+2; $i++)
-		  	if($year == $i)
-				echo "<option value='$i' selected>$i</option>";
-			else
-				echo "<option value='$i'>$i</option>";
-	?>
-</select>
-	<!-- Month dropdown -->
-<select name="month" id="month" onchange="" size="1">
-    <option value="01">January</option>
-    <option value="02">February</option>
-    <option value="03">March</option>
-    <option value="04">April</option>
-    <option value="05">May</option>
-    <option value="06">June</option>
-    <option value="07">July</option>
-    <option value="08">August</option>
-    <option value="09">September</option>
-    <option value="10">October</option>
-    <option value="11">November</option>
-    <option value="12">December</option>
-</select>
+        <!-- Day dropdown -->
+        <select name="day" id="day" onchange="" size="1">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
 
-<!-- Day dropdown -->
-<select name="day" id="day" onchange="" size="1">
-    <option value="01">01</option>
-    <option value="02">02</option>
-    <option value="03">03</option>
-    <option value="04">04</option>
-    <option value="05">05</option>
-    <option value="06">06</option>
-    <option value="07">07</option>
-    <option value="08">08</option>
-    <option value="09">09</option>
-    <option value="10">10</option>
-    <option value="11">11</option>
-    <option value="12">12</option>
-    <option value="13">13</option>
-    <option value="14">14</option>
-    <option value="15">15</option>
-    <option value="16">16</option>
-    <option value="17">17</option>
-    <option value="18">18</option>
-    <option value="19">19</option>
-    <option value="20">20</option>
-    <option value="21">21</option>
-    <option value="22">22</option>
-    <option value="23">23</option>
-    <option value="24">24</option>
-    <option value="25">25</option>
-    <option value="26">26</option>
-    <option value="27">27</option>
-    <option value="28">28</option>
-    <option value="29">29</option>
-    <option value="30">30</option>
-    <option value="31">31</option>
-</select>
+        <p>
+        <input type="Button" value ="Create" name="Create Account" />
+        <input type="RESET" value ="Reset" name="reset" />
+        </p>
 
-<p>
-<input type="Button" value ="Create" name="Create Account" />
-<input type="RESET" value ="Reset" name="reset" />
-</p>
+    </form>
+    </div>
+</div><!-- end survey form -->
 
-      </form>
-
-  </div><!-- end survey form -->
-
- </body>
+</body>
 </html>

@@ -21,7 +21,7 @@ body {
 /*Logo positioning and basic modifications*/
 .toplogo {
     position: absolute;
-    left: 25px;
+    left: 10px;
     height: 100px;
     width: 1015px;
 
@@ -43,7 +43,7 @@ body {
 .tophead {
     position:absolute;
     top: 20px;
-    left:100px;
+    left:140px;
     height: 100px;
 }
 
@@ -63,6 +63,9 @@ h1 {
 
 /*Left side bar and buttons*/
 .left {
+	position: absolute;
+	top: 120px;
+
 	width: 250px;
 	height: 688px;
 	background-color: rgb(241, 239, 223);
@@ -71,14 +74,12 @@ h1 {
 /*Center of website*/
 .center {
 	width: 1000px;
-	height: 770px;
+	height: 1000px;
 	background-color: rgb(103, 110, 140);
 	border-radius: 8px;
 
 	padding-left: 40px;
 	padding-top: 10px;
-
-
 }
 
 /* making buttons */
