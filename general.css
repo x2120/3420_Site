@@ -11,19 +11,24 @@ body {
 	position: absolute;
 	top: 10px;
 	left: 30px;
+	bottom: 10px;
 
 	width: 1150px;
-	height: 770px;
+	height: 810px;
 	background-color: rgb(103, 110, 140);
 	border-radius: 8px;
+
+	padding-left: 40px;
+	padding-top: 10px;
+
 }
 
-/*Logo positioning and basic modifications*/
+ /*Logo positioning and basic modifications*/
 .toplogo {
-    position: absolute;
-    left: 10px;
-    height: 100px;
-    width: 1015px;
+ 	position: absolute;
+ 	left: 10px;
+ 	height: 100px;
+ 	width: 1162px;
 
     background-color: rgb(241, 239, 223); 
 
@@ -41,14 +46,14 @@ body {
 
 /*Header info*/
 .tophead {
-    position:absolute;
+    position: absolute;
     top: 20px;
-    left:140px;
+    left: 140px;
     height: 100px;
 }
 
 h1 {
-	font-family: Georga, serif;
+	font-family: Georgia, serif;
 	font-size: 2em;
 	color: rgb(66, 52, 89);
 }
@@ -65,21 +70,21 @@ h1 {
 .left {
 	position: absolute;
 	top: 120px;
+	left: 10px;
 
 	width: 250px;
 	height: 688px;
 	background-color: rgb(241, 239, 223);
 }
 
-/*Center of website*/
-.center {
-	width: 1000px;
-	height: 1000px;
-	background-color: rgb(103, 110, 140);
-	border-radius: 8px;
+.right {
+	position: absolute;
+	top: 120px;
+	right: 17px;
 
-	padding-left: 40px;
-	padding-top: 10px;
+	width: 900px;
+	height: 688px;
+	background-color: rgb(241, 239, 223);
 }
 
 /* making buttons */
