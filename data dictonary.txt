@@ -1,0 +1,24 @@
+Data Dictonary
+survey
+Mtitle
+Raiting
+mpaa
+year
+RTime
+TRelease
+DRelease
+Actors
+Studio 
+Plot
+Quality
+Save
+Reset
+movie
+username
+password
+passwordverification
+email
+day (birthday)
+month (birthday)
+year (birthday)
+search

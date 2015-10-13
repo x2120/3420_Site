@@ -1,0 +1,40 @@
+logs
+September 23 2015
+1)-Original File creation	
+2) Index update
+3) general css
+4) register
+5) profile changes
+6) more video changes
+7) Css Reset added
+
+September 27 2015
+1) Various Css changes
+	-revisions
+	-reverts
+	-button changes
+	
+September 28 2015
+1) Major updates
+2) changes to php
+
+October 1 2015
+1) Css additions
+	-positioning changes & updates
+	
+October 12 2015
+1) css	
+	-edits to the positioning
+2) Additional html function'
+3) Display details changes
+4) HardCode additions to index
+5) php Reversal
+
+October 13 2015
+1) Links and addition of images
+2) Search window functionality added
+3) Final edits
+
+
+
+https://github.com/mitchell271/3420_Site/commits/master
