@@ -1,75 +1,73 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <!-- Head and meta info -->
 <head>
-    <link type='text/css' rel='stylesheet' href='general.css' />
-    <meta charset="utf-8">
-    <title>Profile</title>
-    <meta name="User profile" content="Contains user info and options to change">
+	<link type='text/css' rel='stylesheet' href='general.css' />
+	<meta charset="utf-8">
+	<title>Profile</title>
+	<meta name="User profile" content="Contains user info and options to change">
 </head>
 
 <body>
 <div class='center'>
 
-    <div class="toplogo">
-        <img src="movie-reel.jpg" alt="reel" style="width:100px;height:80px;">
-    </div>
-    
-    <div class="tophead">
-        <h1><span ID='logoColor'>MyVid</span> Collection</h1>
-        <p>An individual Video Libary</p><br>
-    </div>
+	<div class="toplogo">
+		<img src="movie-reel.jpg" alt="reel" style="width:100px;height:80px;">
+	</div>
+	
+	<div class="tophead">
+		<h1><span ID='logoColor'>MyVid</span> Collection</h1>
+		<p>An individual Video Libary</p><br>
+	</div>
 
-    <!-- Left sidebar and site navigation -->
-    <div class='left'>
-        <br>
-        <ul>
-            <a href="index.html"><li class='button'>Home</li></a>
-            <a href="register.html"><li class='button'>Create Account</li></a>
-            <a href="profile.html"><li class='button'>Edit Account</li></a>
-            <a href="leave.php"><li class='button'>Delete Account</li></a>
-            <a href="addVid.html"><li class='button'>Add Video</li></a>
-            <a href="editVid.html"><li class='button'>Edit Video</li></a>
-            <a href="deleteVid.php"><li class='button'>Delete Video</li></a>
-            <a href="search.html"><li class='button'>Search</li></a>
-            <a href="displayDetails.html"><li class='button'>Display Details</li></a>
-            <a href="login.html"><li class='button'>Login</li></a>
-            <a href="logout.php"><li class='button' ID='inv_button'>Logout</li></a>
-        </ul>
-    </div>
+	<!-- Left sidebar and site navigation -->
+	<div class='left'>
+		<br>
+		<ul>
+			<li class='button'><a href="index.html">Home</a></li>
+			<li class='button'><a href="register.html">Create Account</a></li>
+			<li class='button'><a href="profile.html">Edit Account</a></li>
+			<li class='button'><a href="leave.php">Delete Account</a></li>
+			<li class='button'><a href="addVid.html">Add Video</a></li>
+			<li class='button'><a href="editVid.html">Edit Video</a></li>
+			<li class='button'><a href="deleteVid.php">Delete Video</a></li>
+			<li class='button'><a href="search.html">Search</a></li>
+			<li class='button'><a href="displayDetails.html">Display Details</a></li>
+			<li class='button'><a href="login.html">Login</a></li>
+			<li class='button' ID='inv_button'><a href="logout.php">Logout</a></li>
+		</ul>
+	</div>
 
-    <div class = 'right'>
-        <li>
-            <div class = 'box_title'>
-                Change password:
-            </div>
-            <div class = 'box_field'>
-                <input type="textboxes" value ="" name="Password" />
-            </div>
-        </li>
-        <li>
-            <div class = 'box_title'>
-                Verify password:
-            </div>
-            <div class = 'box_field'>
-                <input type="textboxes" value ="" name="Verification" />
-            </div>
-        </li>
-        <li>
-            <div class = 'box_title'>
-            	Email:
-            </div>
-            <div class = 'box_field'>
-                <input type="textboxes" value ="" name="Email" />
-            </div>
-        </li>
-
-        <p>
-        <input type="Button" value ="Save" name="save" />
-        </p>
-
-    	</form>
-    </div>
+	<div class = 'right'>
+		<ul>
+			<li>
+				<div class = 'box_title'>
+					Change password:
+				</div>
+				<div class = 'box_field'>
+					<input type="password" value ="" name="Password" />
+				</div>
+			</li>
+			<li>
+				<div class = 'box_title'>
+					Verify password:
+				</div>
+				<div class = 'box_field'>
+					<input type="password" value ="" name="Verification" />
+				</div>
+			</li>
+			<li>
+				<div class = 'box_title'>
+					Email:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Email" />
+				</div>
+			</li>
+		</ul>
+		<input type="Button" value ="Save" name="save" />
+	</div>
 </div>
 </body>
 </html>

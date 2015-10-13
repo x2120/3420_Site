@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <!-- Head and meta info -->
@@ -6,7 +7,7 @@
 	<meta charset="utf-8">
 	<title>Edit video</title>
 	<meta name="Edit previous video" content="Edit information for previous video entry">
-<head>
+</head>
 
 <body>
 <div class='center'>
@@ -24,108 +25,179 @@
 	<div class='left'>
 		<br>
 		<ul>
-			<a href="index.html"><li class='button'>Home</li></a>
-			<a href="register.html"><li class='button'>Create Account</li></a>
-			<a href="profile.html"><li class='button'>Edit Account</li></a>
-			<a href="leave.php"><li class='button'>Delete Account</li></a>
-			<a href="addVid.html"><li class='button'>Add Video</li></a>
-			<a href="editVid.html"><li class='button'>Edit Video</li></a>
-			<a href="deleteVid.php"><li class='button'>Delete Video</li></a>
-			<a href="search.html"><li class='button'>Search</li></a>
-			<a href="displayDetails.html"><li class='button'>Display Details</li></a>
-			<a href="login.html"><li class='button'>Login</li></a>
-			<a href="logout.php"><li class='button' ID='inv_button'>Logout</li></a>
+			<li class='button'><a href="index.html">Home</a></li>
+			<li class='button'><a href="register.html">Create Account</a></li>
+			<li class='button'><a href="profile.html">Edit Account</a></li>
+			<li class='button'><a href="leave.php">Delete Account</a></li>
+			<li class='button'><a href="addVid.html">Add Video</a></li>
+			<li class='button'><a href="editVid.html">Edit Video</a></li>
+			<li class='button'><a href="deleteVid.php">Delete Video</a></li>
+			<li class='button'><a href="search.html">Search</a></li>
+			<li class='button'><a href="displayDetails.html">Display Details</a></li>
+			<li class='button'><a href="login.html">Login</a></li>
+			<li class='button' ID='inv_button'><a href="logout.php">Logout</a></li>
 		</ul>
 	</div>
 
 	<div class = 'right'>
-		<div class='survey'>
+		<ul>
 			<!--Title of Movie-->
-			<li><label for="Mtitle">Title:</label> <input type="textboxes" value ="" name="MTitle" /></li>
+			<li>
+				<div class = 'box_title'>
+					Title:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="MTitle" />
+				</div>
+			
+			</li>
 			<!--Rating system-->
-			<li>Rating:
-			<select name="Rating" id="Rating" onchange="" size="1">
-			    <option value="01">1</option>
-			    <option value="02">2</option>
-			    <option value="03">3</option>
-			    <option value="04">4</option>
-			    <option value="05">5</option>
-			    <option value="06">6</option>
-			    <option value="07">7</option>
-			    <option value="08">8</option>
-			    <option value="09">9</option>
-			    <option value="10">10</option>
-			</select>
+			<li>
+				<div class = 'box_title'>
+					Rating: 
+				</div>
+				<div class = 'box_field'>
+					<select name="Rating" onchange="" size="1">
+						<option value="01">1</option>
+						<option value="02">2</option>
+						<option value="03">3</option>
+						<option value="04">4</option>
+						<option value="05">5</option>
+						<option value="06">6</option>
+						<option value="07">7</option>
+						<option value="08">8</option>
+						<option value="09">9</option>
+						<option value="10">10</option>
+					</select>
+				</div>
+			
 			</li>
 			<!--Genre of Movie-->
-			<li>Genre:
-			<select name="Rating" id="Rating" onchange="" size="1">
-			    <option value="01">Action</option>
-			    <option value="02">Adventure</option>
-			    <option value="03">Animation</option>
-			    <option value="04">Comedy</option>
-			    <option value="05">Crime</option>
-			    <option value="06">Documentary</option>
-			    <option value="07">Drama</option>
-			    <option value="08">Family</option>
-			    <option value="09">Fantasy</option>
-			    <option value="10">History</option>
-			    <option value="11">Horror</option>
-				<option value="12">Music</option>
-			    <option value="13">Mystery</option>
-			    <option value="14">Romance</option>
-			    <option value="15">Sci-Fi</option>
-			    <option value="16">Sport</option>
-			    <option value="17">Thriller</option>	
-			    <option value="18">War</option>	
-			    <option value="19">Western</option>	
-			</select>
+			<li>
+				<div class = 'box_title'>
+					Genre:
+				</div>
+				<div class = 'box_field'>
+					<select name="Genre" onchange="" size="1">
+						<option value="01">Action</option>
+						<option value="02">Adventure</option>
+						<option value="03">Animation</option>
+						<option value="04">Comedy</option>
+						<option value="05">Crime</option>
+						<option value="06">Documentary</option>
+						<option value="07">Drama</option>
+						<option value="08">Family</option>
+						<option value="09">Fantasy</option>
+						<option value="10">History</option>
+						<option value="11">Horror</option>
+						<option value="12">Music</option>
+						<option value="13">Mystery</option>
+						<option value="14">Romance</option>
+						<option value="15">Sci-Fi</option>
+						<option value="16">Sport</option>
+						<option value="17">Thriller</option>    
+						<option value="18">War</option> 
+						<option value="19">Western</option> 
+					</select>
+				</div>
+			
 			</li>
 			<li>
 			<!--MPAA Raiting-->
-			<label for="Rating">MPAA Raiting </label>
-			              <input type="checkbox" name="Rating[]" value ="1" /> G
-			              <input type="checkbox" name="Rating[]" value ="2" /> PG
-			              <input type="checkbox" name="Rating[]" value ="3" /> PG-13
-			              <input type="checkbox" name="Rating[]" value ="4" /> R
-			              <input type="checkbox" name="Rating[]" value ="5" /> NC-17
-						 
-			<li>
+			<div class = 'checklist'>
+				<label for="Rating">MPAA Rating</label>
+					<input type="checkbox" name="Rating[]" value ="1" /> G
+					<input type="checkbox" name="Rating[]" value ="2" /> PG
+					<input type="checkbox" name="Rating[]" value ="3" /> PG-13
+					<input type="checkbox" name="Rating[]" value ="4" /> R
+					<input type="checkbox" name="Rating[]" value ="5" /> NC-17
+			</div>
+			</li>			 
 			<!--Year Movie Release-->
-			<li><label for="Year">Year:</label> <input type="textboxes" value ="" name="Year" /></li>
+			<li>
+				<div class = 'box_title'>
+					Year:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Year" />
+				</div>      
+			</li>
 			<!--Run Time-->
-			<li><label for="RTime">Run Time:</label> <input type="textboxes" value ="" name="Runtime" /></li>
+			<li>
+				<div class = 'box_title'>
+					Runtime:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Runtime" />
+				</div>    
+			</li>
 			<!--Theater Release-->
-			<li><label for="TRelease">Theatre Release:</label> <input type="textboxes" value ="" name="TRelease" /></li>
+			<li>
+				<div class = 'box_title'>
+					TRelease:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="TRelease" />
+				</div>    
+			</li>
 			<!--DVD-->
-			<li><label for="DRelease">DVD Release:</label> <input type="textboxes" value ="" name="DRelease" /></li>
+			<li>
+				<div class = 'box_title'>
+					DRelease:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="DRelease" />
+				</div>    
+			</li>
 			<!--Actors-->
-			<li><label for="Actors">Actors:</label> <input type="textboxes" value ="" name="Actors" /></li>
+			<li>
+				<div class = 'box_title'>
+					Actors:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Actors" />
+				</div>               
+			</li>
 			<!--IMG Upload-->
-			<li>cover:<input type="Button" value ="Choose File" name="save" /></li>
+			<li>
+				<div class = 'box_title'>
+					Cover:
+				</div>
+				<div class = 'box_field'>
+					<input type="Button" value ="Choose File" name="save" />
+				</div>    
+			</li>
 			<!--Studio-->
-			<li><label for="Studio">Studio:</label> <input type="textboxes" value ="" name="Studio" /></li>
+			<li>
+				<div class = 'box_title'>
+					Studio:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Studio" />
+				</div>    
+			</li>
 			<!--Plot-->
-			<li><label for="Plot">Plot Summary:</label> <input type="textboxes" value ="" name="Plot" /></li>
+			<li>
+				<div class = 'box_title'>
+					Plot:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Plot" />
+				</div>    
+			</li>
 			<!--Video Type-->
 			<li>
-			<label for="genre">Video Type </label>
-			              <input type="checkbox" name="VType[]" value ="1" /> DVD
-			              <input type="checkbox" name="VType[]" value ="2" />  BluRay
-			              <input type="checkbox" name="VType[]" value ="3" /> Digital SD
-			              <input type="checkbox" name="VType[]" value ="4" />Digital HD
-			              <input type="checkbox" name="VType[]" value ="5" /> 3D
-						  <p/>
-			<li>
-
-
-			<p>
+				<label for="VType">Video Type </label>
+					<input type="checkbox" name="VType[]" value ="1" /> DVD
+					<input type="checkbox" name="VType[]" value ="2" /> BluRay
+					<input type="checkbox" name="VType[]" value ="3" /> Digital SD
+					<input type="checkbox" name="VType[]" value ="4" /> Digital HD
+					<input type="checkbox" name="VType[]" value ="5" /> 3D
+			</li>
+		</ul>
 			<!--Buttons-->
-			<input type="Button" value ="Save" name="Save Changes" />
-			<input type="RESET" value ="Reset" name="reset" />
-			</p>
-
-		</div>
+		<input type="Button" value ="Save" name="Add Video" />
+		<input type="RESET" value ="Reset" name="reset" />
 	</div>
 </div>
 </body>
