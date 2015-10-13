@@ -1,82 +1,380 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<!-- Why is there CSS here?
-<style type= "text/css">
-
-.toplogo {
-    position:absolute;
-    left:0; right:0;
-    height: 100px;
-}
-.tophead {
-    position:absolute;
-    left:100px; right:0;
-    height: 100px;
-}
-h1 {
-	font-family: Georga, serif;
-	font-size: 2em;
-}
-.left {
-    position:absolute;
-    left:0; top:200px; bottom: 0;
-    width: 178px;
-}
-.main {
-    position: absolute;
-    left:178px; top:200px; right:0; bottom:0;
-}
-</style>
--->
-
 <!-- Head and meta info -->
 <head>
 	<link type='text/css' rel='stylesheet' href='general.css' />
 	
+	<div class="tophead">
 		<meta charset="utf-8">
-		<title>Home</title>
-		<meta name="Home page" content="Basic splash home page with information for new uses">
-	
+		<title>Add video</title>
+		<meta name="Add video" content="Add video to personal database">
+	</div>
 <head>
 
 <body>
 <div class='center'>
 
-	<div class="toplogo">
-		<img src="movie-reel.jpg" alt="reel" style="width:100px;height:80px;">
+    <div class="toplogo">
+        <img src="movie-reel.jpg" alt="reel" style="width:100px;height:80px;">
+    </div>
+    
+    <div class="tophead">
+        <h1><span ID='logoColor'>MyVid</span> Collection</h1>
+        <p>An individual Video Libary</p><br>
+    </div>
+
+    <!-- Left sidebar and site navigation -->
+    <div class='left'>
+        <br>
+        <ul>
+            <a href="index.html"><li class='button'>Home</li></a>
+            <a href="register.html"><li class='button'>Create Account</li></a>
+            <a href="profile.html"><li class='button'>Edit Account</li></a>
+            <a href="leave.php"><li class='button'>Delete Account</li></a>
+            <a href="addVid.html"><li class='button'>Add Video</li></a>
+            <a href="editVid.html"><li class='button'>Edit Video</li></a>
+            <a href="deleteVid.php"><li class='button'>Delete Video</li></a>
+            <a href="search.html"><li class='button'>Search</li></a>
+            <a href="displayDetails.html"><li class='button'>Display Details</li></a>
+            <a href="login.html"><li class='button'>Login</li></a>
+            <a href="logout.php"><li class='button' ID='inv_button'>Logout</li></a>
+        </ul>
+    </div>
+
+    <div class = 'right'>
+        <div class = 'survey'>
+<table>
+
+<tr>
+    <th><!--movie 1-->
+		<div class="mov 1" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
 	</div>
+</th>
+
+	<th><!--movie 2-->	
+		<div class="mov 2" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>		
+
+	<th><!--movie 3-->	
+<div class="mov 3" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+
+	<th><!--movie 4-->	
+<div class="mov 4" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>	
+</tr>
+  
+<tr>
+    <th><!--movie 5-->	
+<div class="mov 5" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+
+    <th><!--movie 6-->	
+<div class="mov 6" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+		
+    <th><!--movie 7-->    
+<div class="mov 7" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+
+    <th><!--movie 8-->
+	<div class="mov 8" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+</tr>
+
+<tr>
+    <th><!--movie 9-->	
+<div class="mov 9" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+
+    <th><!--movie 10-->	
+<div class="mov 10" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+		
+    <th><!--movie 11-->    
+<div class="mov 11" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+
+    <th><!--movie 12-->
+	<div class="mov 12" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+</tr>
+
+<tr>
+    <th><!--movie 13-->	
+<div class="mov 13" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+
+    <th><!--movie 14-->	
+<div class="mov 14" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
+		
+    <th><!--movie 15-->    
+<div class="mov 15" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
+	</div>
+</th>
 	
-	<div class="tophead">
-		<h1><span ID='logoColor'>MyVid</span> Collection</h1>
-		<p>An individual Video Libary</p>
-		<br>
+	<th><!--movie 16-->
+	<div class="mov 16" >
+	<a href="http://www.w3schools.com">
+	<img src="movie-reel.jpg" alt="movie poster 1" style="width:65px;height:92px;">
+	</a>
+	<p> description of movie </p>
+	<p>
+	<a href="http://www.wikipedia.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.yahoo.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	<a href="http://www.google.com">
+	<img src="movie-reel.jpg" alt="Bicon" style="width:25px;height:25px;">
+	</a>
+	</p>
 	</div>
+</th>
+</tr>
 
-	<!-- Left sidebar and site navigation -->
-	<div class='left'>
-		<br>
-		<ul>
-			<a href="index.html"><li class='button'>Home</li></a>
-			<a href="register.html"><li class='button'>Create Account</li></a>
-			<a href="profile.html"><li class='button'>Edit Account</li></a>
-			<a href="leave.php"><li class='button'>Delete Account</li></a>
-			<a href="addVid.html"><li class='button'>Add Video</li></a>
-			<a href="editVid.html"><li class='button'>Edit Video</li></a>
-			<a href="deleteVid.php"><li class='button'>Delete Video</li></a>
-			<a href="search.html"><li class='button'>Search</li></a>
-			<a href="displayDetails.html"><li class='button'>Display Details</li></a>
-			<a href="login.html"><li class='button'>Login</li></a>
-			<a href="logout.php"><li class='button' ID='inv_button'>Logout</li></a>
-		</ul>
-	</div>
-
-	<div class = 'right'>
-		<div class='main'>
-			
-
-		</div>
-	</div>
+</table>    
 </div>
+</div>
+    
 </body>
 </html>
