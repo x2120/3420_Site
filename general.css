@@ -147,12 +147,18 @@ Form positioning
 	
 }
 
-/*.box_title {
+.box_title {
+	width: 15%;
 	float: left;
     text-align: right;
+
+    padding-bottom: 5px;
 }
 
 .box_field {
+	width: 80%;
 	margin-left: 10px;
     float:left;
-}*/
+
+    padding-bottom: 5px;
+}

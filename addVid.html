@@ -51,6 +51,7 @@
                     <div class = 'box_field'>
                         <input type="textboxes" value ="" name="MTitle" />
                     </div>
+                
                 </li>
                 <!--Rating system-->
                 <li>
@@ -71,7 +72,7 @@
                             <option value="10">10</option>
                         </select>
                     </div>
-                    
+                
                 </li>
                 <!--Genre of Movie-->
                 <li>
@@ -101,18 +102,19 @@
                             <option value="19">Western</option> 
                         </select>
                     </div>
- 
+                
                 </li>
                 <li>
                 <!--MPAA Raiting-->
-                <label for="Rating">MPAA Rating</label>
-                	<input type="checkbox" name="Rating[]" value ="1" /> G
-                	<input type="checkbox" name="Rating[]" value ="2" /> PG
-                	<input type="checkbox" name="Rating[]" value ="3" /> PG-13
-                	<input type="checkbox" name="Rating[]" value ="4" /> R
-                	<input type="checkbox" name="Rating[]" value ="5" /> NC-17
-                			 
-                <br>
+                <div class = 'checklist'>
+                    <label for="Rating">MPAA Rating</label>
+                    	<input type="checkbox" name="Rating[]" value ="1" /> G
+                    	<input type="checkbox" name="Rating[]" value ="2" /> PG
+                    	<input type="checkbox" name="Rating[]" value ="3" /> PG-13
+                    	<input type="checkbox" name="Rating[]" value ="4" /> R
+                    	<input type="checkbox" name="Rating[]" value ="5" /> NC-17
+                </div>
+                </li>			 
                 <!--Year Movie Release-->
                 <li>
                     <div class = 'box_title'>
@@ -121,6 +123,7 @@
                     <div class = 'box_field'>
                         <input type="textboxes" value ="" name="Year" />
                     </div>
+                
                 </li>
                 <!--Run Time-->
                 <li>
@@ -157,6 +160,7 @@
                     <div class = 'box_field'>
                         <input type="textboxes" value ="" name="Actors" />
                     </div>    
+                
                 </li>
                 <!--IMG Upload-->
                 <li>
@@ -189,11 +193,11 @@
                 <li>
                 <label for="genre">Video Type </label>
                 	<input type="checkbox" name="VType[]" value ="1" /> DVD
-                	<input type="checkbox" name="VType[]" value ="2" />  BluRay
+                	<input type="checkbox" name="VType[]" value ="2" /> BluRay
                 	<input type="checkbox" name="VType[]" value ="3" /> Digital SD
-                	<input type="checkbox" name="VType[]" value ="4" />Digital HD
+                	<input type="checkbox" name="VType[]" value ="4" /> Digital HD
                 	<input type="checkbox" name="VType[]" value ="5" /> 3D
-                <li>
+                </li>
 
                 <p>
                 <!--Buttons-->
