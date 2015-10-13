@@ -147,7 +147,7 @@ Form positioning
 	
 }
 
-/*.box_title {
+.box_title {
 	float: left;
     text-align: right;
 }
@@ -155,4 +155,4 @@ Form positioning
 .box_field {
 	margin-left: 10px;
     float:left;
-}*/
+}
