@@ -114,11 +114,13 @@ Buttons
 	margin-left: 10px;
 }
 
+/*text-decoration was being fiddly*/
 .button > a {
 	text-decoration: none;
 	color: rgb(66, 52, 89);
 }
 
+/*inverted color for button*/
 #inv_button {
 	background-color: rgb(66, 52, 89);
 	border-color: rgb(158, 192, 171);
@@ -135,6 +137,7 @@ Buttons
 	font-weight: bold;
 }
 
+/*grid for index*/
 .grid {
 	width: 100px;
 	height: 150px;

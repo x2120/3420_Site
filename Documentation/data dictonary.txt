@@ -1,24 +1,67 @@
 Data Dictonary
-survey
+
 Mtitle
-Raiting
+	movie title
+	no functionality yet, will add with PHP segment of assignment
+
+Rating
+	movie enjoyability rating
+	equivalent to star rating
+
 mpaa
+	movie rating from american MPAA 
+	suitability for audiences
+
 year
+	year released
+
 RTime
+	running time of movie
+
 TRelease
+	theatrical release
+
 DRelease
+	DVD release
+
 Actors
+	major actors
+
 Studio 
+	major studio attached to project
+
 Plot
-Quality
+	plot synopsis
+
 Save
+	Save current form, update relevant SQL table
+
 Reset
-movie
+	Reset form to blank
+
 username
+	screen name for user
+	used for login pruposes
+
 password
+	user password
+	used for authen
+
 passwordverification
+	verify password for registration
+
 email
+	email for registration
+	used for updates and account recovery
+
 day (birthday)
+	date of birth of user
+
 month (birthday)
+	date of birth of user
+
 year (birthday)
+	date of birth of user
+
 search
+	search for movie
