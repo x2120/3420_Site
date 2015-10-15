@@ -120,23 +120,18 @@ Buttons
 	color: rgb(66, 52, 89);
 }
 
-/*inverted color for button*/
-#inv_button {
-	background-color: rgb(66, 52, 89);
-	border-color: rgb(158, 192, 171);
-	color: rgb(158, 192, 171);
-}
-
-#inv_button > a {
-	color: rgb(158, 192, 171);gb(66, 52, 89);
-}
-
 /* hover over button */
 .button:hover {
 	text-decoration: underline;
 	font-weight: bold;
+
+	background-color: rgb(66, 52, 89);
+	border-color: rgb(158, 192, 171);
 }
 
+.button:hover > a {
+	color: rgb(158, 192, 171);
+}
 /*grid for index*/
 .grid {
 	width: 100px;
@@ -224,9 +219,18 @@ Display info centre box
 /*----------------------------------------------------------
 Checklist
 ----------------------------------------------------------*/
-.checklist {
+fieldset {
 	border: 5px solid rgb(158, 192, 171);
-	margin-bottom: 40px;
+	margin-bottom: 10px;
+	margin-left: 60px;
+}
+
+#mpaa_rating {
+	width: 30%;
+}
+
+#video_type {
+	width: 43%;
 }
 
 li > label {
