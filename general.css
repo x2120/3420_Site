@@ -77,6 +77,7 @@ Header
     top: 20px;
     left: 140px;
     height: 100px;
+    margin-top: 15px;
 }
 
 .tophead > h1 {
@@ -100,7 +101,6 @@ Buttons
 .button {
 	height: 30px;
 	width: 200px;
-	text-decoration: none;
 	color: rgb(66, 52, 89);
 	
 	background-color: rgb(158, 192, 171);
@@ -114,10 +114,19 @@ Buttons
 	margin-left: 10px;
 }
 
+.button > a {
+	text-decoration: none;
+	color: rgb(66, 52, 89);
+}
+
 #inv_button {
 	background-color: rgb(66, 52, 89);
 	border-color: rgb(158, 192, 171);
 	color: rgb(158, 192, 171);
+}
+
+#inv_button > a {
+	color: rgb(158, 192, 171);gb(66, 52, 89);
 }
 
 /* hover over button */
@@ -126,18 +135,16 @@ Buttons
 	font-weight: bold;
 }
 
-
 .grid {
-width: 100px;
-height: 150px;
-background-color:#EFEFEF;
+	width: 100px;
+	height: 150px;
+	background-color:#EFEFEF;
 }
 
-.Bicon
-{
-width: 25px;
-height: 25px;
-background-color:#EFEFEF;
+.Bicon {
+	width: 25px;
+	height: 25px;
+	background-color:#EFEFEF;
 }
 
 /*----------------------------------------------------------
@@ -148,7 +155,7 @@ Form positioning
 	float: left;
     text-align: right;
 
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .box_field {
@@ -156,5 +163,70 @@ Form positioning
 	margin-left: 10px;
     float:left;
 
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+/*----------------------------------------------------------
+Display info centre box
+----------------------------------------------------------*/
+/*Box inside .right for containing movie details*/
+.display_box {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	width: 90%;
+	height: 70%;
+
+	background-color: rgb(241, 239, 223);
+	border: 5px solid rgb(158, 192, 171);
+	border-radius: 5px;
+
+	box-shadow: 0px 0px 30px 0px;
+}
+
+/*Seperate div for deatils*/
+.movie_details {
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 350px;
+}
+
+#synopsis {
+	word-wrap: normal;
+	width: 400px;
+}
+
+/*Movie cover art*/
+.display_box > img {
+	position: absolute;
+	padding-top: 30px;
+	padding-left: 20px;
+
+	width: 30%;
+	height: 60%;
+}
+
+/*Small Box for login and single text fields*/
+#pretty_box {
+	margin-top: 30px;
+	width: 50%;
+	height: 10%;
+
+	background-color: ;
+	border: 5px solid rgb(158, 192, 171);
+	border-radius: 5px;
+}
+
+/*----------------------------------------------------------
+Checklist
+----------------------------------------------------------*/
+.checklist {
+	border: 5px solid rgb(158, 192, 171);
+	margin-bottom: 40px;
+}
+
+li > label {
+	margin-left: 38px;
+	padding-bottom: 10px;
 }
