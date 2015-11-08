@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
@@ -21,22 +20,7 @@
     </div>
 
     <!-- Left sidebar and site navigation -->
-	<div class='left'>
-		<br>
-		<ul>
-			<li class='button'><a href="index.html">Home</a></li>
-			<li class='button'><a href="register.html">Create Account</a></li>
-			<li class='button'><a href="profile.html">Edit Account</a></li>
-			<li class='button'><a href="../PHP/leave.php">Delete Account</a></li>
-			<li class='button'><a href="addVid.html">Add Video</a></li>
-			<li class='button'><a href="editVid.html">Edit Video</a></li>
-			<li class='button'><a href="../PHP/deleteVid.php">Delete Video</a></li>
-			<li class='button'><a href="search.html">Search</a></li>
-			<li class='button'><a href="displayDetails.html">Display Details</a></li>
-			<li class='button'><a href="login.html">Login</a></li>
-			<li class='button' ID='inv_button'><a href="../PHP/logout.php">Logout</a></li>
-		</ul>
-	</div>
+
 
     <div class = 'right'>
 		<table>
