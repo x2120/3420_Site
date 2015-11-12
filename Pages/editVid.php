@@ -9,6 +9,50 @@
 </head>
 
 <body>
+<?php
+$servername = "localhost";
+$username = "justinvuong";
+$password = "";
+$dbname = "justinvuong";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+//compare table values if 2 are the same spits out an error
+
+
+// sql to create table
+$sql = "SELECT title FROM Movie";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr><th>ID</th><th>Name</th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["id"]."</td><td>".$row["firstname"]." ".$row["lastname"]."</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+
+//error testing
+if ($conn->query($sql) === TRUE) {
+    echo "Successfully added to table!";
+} else {
+    echo "Error adding to table: " . $conn->error;
+}
+
+$conn->close();
+?> 
+
 <div class='center'>
 
 	<div class="toplogo">
