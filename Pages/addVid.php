@@ -30,7 +30,7 @@ if () == TRUE) {
     echo "There is already a move with that name!";
 } 
 
-// sql to create table
+// sql to insert into table
 $sql = "INSERT INTO Movies (title, genre, actors, MPAA, relType, stars, runtime, theatRelese, homeRelease, cover, studio, plot)
 Values (,,,,) "//add values later
 ;
@@ -239,7 +239,7 @@ $conn->close();
 
             <p>
             <!--Buttons-->
-            <input type="Button" value ="Save" name="Add Video" />
+            <input type="Submit" value ="Save" name="Add Video" />
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>
