@@ -19,9 +19,24 @@ if () == TRUE) {
     echo "There is already a move with that name!";
 } 
 
+$MTitle=$_POST['MTitle']; 
+$MRate=$_POST['MRating']; 
+$Genre=$_POST['Genre']; 
+$SRate=$_POST['SRating']; 
+$Year=$_POST['Year']; 
+$Runtime=$_POST['Runtime']; 
+$TRelease=$_POST['TRelease']; 
+$DRelease=$_POST['DRelease']; 
+$Actors=$_POST['Actors']; 
+//$=Save$_POST['save'];// to upload image  
+$Studio=$_POST['Studio']; 
+$Plots=$_POST['Plot']; 
+$Vtype=$_POST['VType']; 
+
+
 // sql to insert into table
 $sql = "INSERT INTO Movies (title, genre, actors, MPAA, relType, stars, runtime, theatRelese, homeRelease, cover, studio, plot)
-Values (,,,,) "//add values later
+VALUES ('$MTitle','$Genre','$Actors','$MRate','$Vtype','$SRate','','','','','') "//add values later
 ;
 
 if ($conn->query($sql) === TRUE) {
