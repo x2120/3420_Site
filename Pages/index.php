@@ -10,17 +10,10 @@
 <body>
 <div class='center'>
 
-    <div class="toplogo">
-        <img src = "../Images/movie-reel.jpg" alt="reel" style="width:100px;height:80px;">
-    </div>
-    
-    <div class="tophead">
-        <h1><span ID='logoColor'>MyVid</span> Collection</h1>
-        <p>An individual Video Libary</p><br>
-    </div>
-
-    <!-- Left sidebar and site navigation -->
-
+   	<?php
+		require("../Templates/header.php"); 
+		require("../Templates/sidebar.php"); 
+	?>
 
     <div class = 'right'>
 		<table>
