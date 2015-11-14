@@ -168,7 +168,7 @@
                     Cover:
                 </div>
                 <div class = 'box_field'>
-                    <input type="Button" value ="Choose File" name="save" />
+                    <input type="file" value ="" name="IUpload" />
                 </div>    
             </li>
             <!--Studio-->
