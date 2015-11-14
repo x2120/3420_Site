@@ -30,13 +30,13 @@ $DRelease=$_POST['DRelease'];
 $Actors=$_POST['Actors']; 
 //$=Save$_POST['save'];// to upload image  
 $Studio=$_POST['Studio']; 
-$Plots=$_POST['Plot']; 
+$Plot=$_POST['Plot']; 
 $Vtype=$_POST['VType']; 
 
 
-// sql to insert into table
-$sql = "INSERT INTO Movies (title, genre, actors, MPAA, relType, stars, runtime, theatRelese, homeRelease, cover, studio, plot)
-VALUES ('$MTitle','$Genre','$Actors','$MRate','$Vtype','$SRate','','','','','') "//add values later
+// sql to insert into table 																							add cover (upload image)
+$sql = "INSERT INTO Movies (title, genre, actors, MPAA, relType, stars, runtime, theatRelese, homeRelease, studio, plot)
+VALUES ('$MTitle','$Genre','$Actors','$MRate','$Vtype','$SRate','$Runtime','$TRelease','$DRelease','$Studio','$Plot') "//add cover
 ;
 
 if ($conn->query($sql) === TRUE) {
