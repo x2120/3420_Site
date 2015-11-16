@@ -1,14 +1,3 @@
-<<?php
-$conn = connectdb();
-
-if(!isset($_GET['id'])|| !is_int((int)$_GET['id'])){
-	header("Location: index.php");
-}else{
-	$id =  $_GET['id'];
-}
-
-
-?>   
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
