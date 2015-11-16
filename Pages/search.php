@@ -25,8 +25,10 @@
 						Search for movie:
 					</div>
 					<div class = 'box_field'>
-						<input type="text" value ="" name="search" />
-						<input type="Button" value ="Search" name="SButton" />
+						<form name = "Search" action = "search_DB.php" method = "post">
+							<input type= "text" name = "search" value = "search_param"/>
+							<input type= "button" name = "SButton" value = "Search"/>
+						</form>
 					</div>
 				</li>
 			</ul>
