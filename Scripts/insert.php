@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "justinvuong";
-$password = "";
+$password = "1234";
 $dbname = "justinvuong";
 
 // Create connection
@@ -15,27 +15,27 @@ if ($conn->connect_error) {
 
 //compare table values if 2 are the same spits out an error
 
-if () == TRUE) {
+/*if () == TRUE) {
     echo "There is already a move with that name!";
-} 
+} */
 
-$MTitle=$_POST['MTitle']; 
-$MRate=$_POST['MRating']; 
-$Genre=$_POST['Genre']; 
-$SRate=$_POST['SRating']; 
-$Year=$_POST['Year']; 
-$Runtime=$_POST['Runtime']; 
-$TRelease=$_POST['TRelease']; 
-$DRelease=$_POST['DRelease']; 
-$Actors=$_POST['Actors']; 
-//$=Save$_POST['save'];// to upload image  
-$Studio=$_POST['Studio']; 
-$Plot=$_POST['Plot']; 
-$Vtype=$_POST['VType']; 
+$MTitle=(isset($_POST['MTitle'])); 
+$MRate=(isset($_POST['MRating'])); 
+$Genre=(isset($_POST['Genre'])); 
+$SRate=(isset($_POST['SRating'])); 
+$Year=(isset($_POST['Year'])); 
+$Runtime=(isset($_POST['Runtime'])); 
+$TRelease=(isset($_POST['TRelease'])); 
+$DRelease=(isset($_POST['DRelease'])); 
+$Actors=(isset($_POST['Actors'])); 
+//$=Save(isset($_POST['save']);// to upload image  
+$Studio=(isset($_POST['Studio'])); 
+$Plot=(isset($_POST['Plot'])); 
+$Vtype=(isset($_POST['VType'])); 
 
 
 // sql to insert into table 																							add cover (upload image)
-$sql = "INSERT INTO Movies (title, genre, actors, MPAA, relType, stars, runtime, theatRelese, homeRelease, studio, plot)
+$sql = "INSERT INTO Movie (title, genre, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot)
 VALUES ('$MTitle','$Genre','$Actors','$MRate','$Vtype','$SRate','$Runtime','$TRelease','$DRelease','$Studio','$Plot') "//add cover
 ;
 

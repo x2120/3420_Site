@@ -13,11 +13,13 @@
 <div class='center'>
 
     <?php
-        require("../Templates/header.php"); 
-        require("../Templates/sidebar.php"); 
+		require("../Scripts/insert.php");
+        require("../Templates/header.php");
+		require("../Templates/sidebar.php"); 
     ?>
 
     <div class = 'right'>
+	<form>
         <ul>
             <!--Title of Movie-->
             <li>
@@ -95,7 +97,8 @@
             </li>			 
             <!--Year Movie Release-->
             <li>
-                <div class = 'box_title'>
+            
+			<div class = 'box_title'>
                     Year:
                 </div>
                 <div class = 'box_field'>
@@ -187,7 +190,9 @@
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>
-    </div>
+    </form>
+	</div>
 </div>
+
 </body>
 </html>
