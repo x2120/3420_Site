@@ -13,13 +13,12 @@
 <div class='center'>
 
     <?php
-		require("../Scripts/insert.php");
         require("../Templates/header.php");
 		require("../Templates/sidebar.php"); 
     ?>
 
     <div class = 'right'>
-	<form>
+	<form action= "../Scripts/insert.php" method "post">
         <ul>
             <!--Title of Movie-->
             <li>

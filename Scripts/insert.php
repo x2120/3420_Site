@@ -19,19 +19,19 @@ if ($conn->connect_error) {
     echo "There is already a move with that name!";
 } */
 
-$MTitle=(isset($_POST['MTitle'])); 
-$MRate=(isset($_POST['MRating'])); 
-$Genre=(isset($_POST['Genre'])); 
-$SRate=(isset($_POST['SRating'])); 
-$Year=(isset($_POST['Year'])); 
-$Runtime=(isset($_POST['Runtime'])); 
-$TRelease=(isset($_POST['TRelease'])); 
-$DRelease=(isset($_POST['DRelease'])); 
-$Actors=(isset($_POST['Actors'])); 
-//$=Save(isset($_POST['save']);// to upload image  
-$Studio=(isset($_POST['Studio'])); 
-$Plot=(isset($_POST['Plot'])); 
-$Vtype=(isset($_POST['VType'])); 
+$MTitle=($_GET['MTitle']); 
+/*$MRate=($_GET['MRating']); */
+$Genre=($_GET['Genre']); 
+/*$SRate=($_GET['SRating']); */
+$Year=($_GET['Year']); 
+$Runtime=($_GET['Runtime']); 
+$TRelease=($_GET['TRelease']); 
+$DRelease=($_GET['DRelease']); 
+$Actors=($_GET['Actors']); 
+/*$=Save($_GET['save']); // to upload image   */
+$Studio=($_GET['Studio']); 
+$Plot=($_GET['Plot']); 
+/*$Vtype=($_GET['VType']); */
 
 
 // sql to insert into table 																							add cover (upload image)
