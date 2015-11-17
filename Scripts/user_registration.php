@@ -46,7 +46,7 @@ class Registration
             ) {
             
             // create a database connection
-            $this->db_connection = new mysqli(localhost, $username, $user_password, "frigg@trentu.ca");
+            $this->db_connection = new mysqli(localhost, $username, $user_password, "mitchellmiller");
 
             // if no connection errors
             if (!$this->db_connection->connect_errno) {

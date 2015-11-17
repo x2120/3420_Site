@@ -27,7 +27,7 @@ class Login
 
         elseif (!empty($_POST['username']) && !empty($_POST['user_password']))
         {
-            $this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            $this->db_connection = new mysqli(localhost, 'justinvuong', '1234', 'justinvuong');
             
             // functioning db
             if (!$this->db_connection->connect_errno) {
@@ -36,7 +36,7 @@ class Login
                 $username = $this->db_connection->real_escape_string($_POST['username']);
 
                 //checks credentials
-                $sql = "SELECT username, user_email, user_password_hash
+                $sql = "SELECT username, user_email
                         FROM users
                         WHERE username = '" . $username . "' OR user_email = '" . $username . "';";
                 $login_check = $this->db_connection->query($sql);
@@ -46,8 +46,7 @@ class Login
                     // get result row (as an object)
                     $result_row = $login_check->fetch_object();
                     
-                    // hashed password for basic security
-                    if (password_verify($_POST['user_password'], $result_row->user_password_hash))
+                    if ($_POST['user_password'] == $username)
                     {
                         $_SESSION['username'] = $result_row->username;
                         $_SESSION['user_email'] = $result_row->user_email;

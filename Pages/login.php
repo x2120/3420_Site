@@ -12,6 +12,7 @@
 <div class='center'>
 
 	<?php
+		require("../Scripts/login_script.php");
 		require("../Templates/header.php"); 
 		require("../Templates/sidebar.php"); 
 	?>
@@ -45,9 +46,7 @@
 </div>
 
 <?php
-	// cookie and session creation
-	$cookie_name = "user"
-	$cookie_type = "$UserName"
+
 ?>
 
 </body>
