@@ -13,28 +13,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-//compare table values if 2 are the same spits out an error
-
-/* if () == TRUE) {
-    echo "There is already a move with that name!";
-}  */
 
 $MTitle=($_GET['MTitle']);
-
-/*
-$MRate=($_GET['Rating[]']); 
-$Genre=($_GET['Genre']); 
-$SRate=($_GET['Rating']); 
-$Year=($_GET['Year']); 
-$Runtime=($_GET['Runtime']); 
-$TRelease=($_GET['TRelease']); 
-$DRelease=($_GET['DRelease']); 
-$Actors=($_GET['Actors']); 
-$Save=($_GET['AddVideo']); // to upload image  
-$Studio=($_GET['Studio']); 
-$Plot=($_GET['Plot']); 
-$Vtype=($_GET['VType[]']); 
- */
 
 
 // sql to insert into table 																							add cover (upload image)
@@ -67,7 +47,7 @@ $conn->close();
 	?>
 
     <div class = 'right'>
-	<form action= "../Scripts/Edittest.php" method "post">
+	<form action= "../Scripts/change.php" method "post">
         <ul>
             <!--Title of Movie-->
             <li>
