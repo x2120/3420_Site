@@ -25,7 +25,7 @@
 							Username:
 						</div>
 						<div class = 'box_field'>
-							<input type = "text" value = "" name = "username" />
+							<input type = "text" value = "" name = "client_username" />
 						</div>
 					</li>
 					<li>
@@ -33,7 +33,7 @@
 							Password:
 						</div>
 						<div class = 'box_field'>
-							<input type = "password" value = "" name = "password" />
+							<input type = "password" value = "" name = "client_password" />
 						</div>
 					</li>
 				</ul>

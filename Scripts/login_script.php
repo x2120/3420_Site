@@ -1,27 +1,27 @@
 <?php
     $servername = "localhost";
-	$username = "justinvuong";
-	$password = "1234";
+	$server_username = "justinvuong";
+	$server_password = "1234";
 	$dbname = "justinvuong";
 
 	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
+	$conn = new mysqli($servername, $server_username, $server_password, $dbname);
 
 	// Check connection
 
 	if ($conn->connect_error)
 		{ die("Connection failed: " . $conn->connect_error); }
 	
-	$username = $_POST["username"];
-	$password = $_POST["password"];
+	$client_username = $_POST["client_username"];
+	$client_password = $_POST["client_password"];
 
-	$username = stripslashes($username);
-	$password = stripslashes($password);
-	$username = mysql_real_escape_string($username);
-	$password = mysql_real_escape_string($password);
+	$client_username = stripslashes($client_username);
+	$client_password = stripslashes($client_password);
+	$client_username = mysql_real_escape_string($client_username);
+	$client_password = mysql_real_escape_string($client_password);
 
-	$result = mysql_query("SELECT * FROM $tbl_name WHERE name = '$username' and password = '$password' ");
-
+	$sql = "SELECT * FROM User WHERE name = '$client_username' and password = '$client_password' ";
+	$result = mysql_query($sql);
 	$count = mysql_num_rows($result);
 
 	//if results match, then count = 1
@@ -53,7 +53,7 @@
 	else
 		{ echo "Wrong Username or Password"; }
 
-	$db_connect = close();
+	$conn->close();
 ?>
     
     <!-- //check if logged in
