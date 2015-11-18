@@ -27,13 +27,13 @@ class Login
 
         elseif (!empty($_POST['username']) && !empty($_POST['user_password']))
         {
-            $this->db_connection = new mysqli(localhost, 'justinvuong', '1234', 'justinvuong');
+            $this->db_connection = new mysqli("localhost", "justinvuong", "1234", "justinvuong");
             
             // functioning db
             if (!$this->db_connection->connect_errno) {
                 
                 // format the post info
-                $username = $this->db_connection->real_escape_string($_POST['username']);
+                $username = $this->db_connection->real_escape_string($_POST["username"]);
 
                 //checks credentials
                 $sql = "SELECT username, user_email
@@ -46,11 +46,11 @@ class Login
                     // get result row (as an object)
                     $result_row = $login_check->fetch_object();
                     
-                    if ($_POST['user_password'] == $username)
+                    if ($_POST["user_password"] == $username)
                     {
-                        $_SESSION['username'] = $result_row->username;
-                        $_SESSION['user_email'] = $result_row->user_email;
-                        $_SESSION['user_login_status'] = 1;
+                        $_SESSION["username"] = $result_row->username;
+                        $_SESSION["user_email"] = $result_row->user_email;
+                        $_SESSION["user_login_status"] = 1;
                     }
                 
                     else
