@@ -1,88 +1,61 @@
 <?php
-class Login
-{
-    private $db_connection = null;
-    public $errors = array();
-    public $messages = array();
+    $db_path = "localhost";
+    $username = "justinvuong";
+    $user_password = "1234";
+    $db_name = "justinvuong";
 
-    //create session
-    public function __construct()
-    {
+	$db_connect = new mysqli($db_path, $username, $password, $db_name) or die("cannot connect"); 
+	
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 
-        session_start();
-        if (isset($_GET["logout"]))
-        { $this->do_logout(); }
-        elseif (isset($_POST["login"]))
-        { $this->do_login(); }
-    }
+	$username = stripslashes($username);
+	$password = stripslashes($password);
+	$username = mysql_real_escape_string($username);
+	$password = mysql_real_escape_string($password);
 
-    //login function
-    private function do_login()
-    {
-        // check login form contents
-        if (empty($_POST['username']))
-        { $this->errors[] = "Username required"; }
-        elseif (empty($_POST['user_password']))
-        { $this->errors[] = "Password required"; }
+	$result = mysql_query("SELECT * FROM $tbl_name WHERE name = '$username' and password = '$password' ");
 
-        elseif (!empty($_POST['username']) && !empty($_POST['user_password']))
-        {
-            $this->db_connection = new mysqli("localhost", "justinvuong", "1234", "justinvuong");
-            
-            // functioning db
-            if (!$this->db_connection->connect_errno) {
-                
-                // format the post info
-                $username = $this->db_connection->real_escape_string($_POST["username"]);
+	$count = mysql_num_rows($result);
 
-                //checks credentials
-                $sql = "SELECT username, user_email
-                        FROM users
-                        WHERE username = '" . $username . "' OR user_email = '" . $username . "';";
-                $login_check = $this->db_connection->query($sql);
-                
-                // if this user exists
-                if ($login_check->num_rows == 1) {
-                    // get result row (as an object)
-                    $result_row = $login_check->fetch_object();
-                    
-                    if ($_POST["user_password"] == $username)
-                    {
-                        $_SESSION["username"] = $result_row->username;
-                        $_SESSION["user_email"] = $result_row->user_email;
-                        $_SESSION["user_login_status"] = 1;
-                    }
-                
-                    else
-                    { $this->errors[] = "Wrong password. Try again."; }
-                } 
-                
-                else 
-                { $this->errors[] = "This user does not exist."; }
-            }
-            
-            else 
-            { $this->errors[] = "Database connection problem."; }
-        }
-    }
-   	
-   	//logout function
-    public function do_logout()
-    {
-        // delete the session of the user
-        $_SESSION = array();
-        session_destroy();
-        // return a little feeedback message
-        $this->messages[] = "You have been logged out.";
-    }
+	//if results match, then count = 1
+	if($count == 1)
+	{
+		//session creation
+		$session_name = 'sec_session_id';
+	    $secure = SECURE;
+	        
+	    // Forces sessions to only use cookies.
+	    if (ini_set('session.use_only_cookies', 1) === FALSE)
+	    {
+	        header("Location: ../error.php?err=Could not initiate a safe session (ini_set)");
+	        exit();
+	    }
+	    
+	    // Gets current cookies params.
+	    $cookieParams = session_get_cookie_params();
+	    session_set_cookie_params($cookieParams["lifetime"], $cookieParams["path"], $cookieParams["domain"], $secure, $httponly);
+	    
+	    // Sets the session name to the one set above.
+	    session_name($session_name);
+	    session_start();
+	    session_regenerate_id(true);
+
+	    echo "<p>Login successful</p>";
+	}
+	
+	else
+		{ echo "Wrong Username or Password"; }
+
+	$db_connect = close();
+?>
     
-    //check if logged in
-    public function login_check()
+    <!-- //check if logged in
+    function login_check()
     {
-        if (isset($_SESSION['user_login_status']) && $_SESSION['user_login_status'] == 1)
-        { return true; }
-        
-        else
-        { return false; }
-    }
-}
+    if (isset($_SESSION['user_login_status']) && $_SESSION['user_login_status'] == 1)
+    { return true; }
+      
+    else
+    { return false; }
+	} -->

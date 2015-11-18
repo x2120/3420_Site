@@ -27,7 +27,7 @@
 						Search for movie:
 					</div>
 					<div class = 'box_field'>
-						<form name = "search" action = "../Scripts/search_db.php?go" method = "post">
+						<form name = "search" action = "../Scripts/search_db.php" method = "post">
 							<input type= "text" name = "search" value = ""/>
 							<select name = "search_type" selected="selected" value="start">
 		                        <option value="Title">Title</option>

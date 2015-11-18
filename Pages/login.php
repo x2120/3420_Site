@@ -38,7 +38,7 @@
 						</div>
 					</li>
 				</ul>
-				<input type="Button" value ="Login" name="login" />
+				<input type="submit" value ="Login" name="login" />
 				<input type="RESET" value ="Reset" name="reset" />
 			</form>
 		</div>
