@@ -13,25 +13,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-//compare table values if 2 are the same spits out an error
-
-/*if () == TRUE) {
-    echo "There is already a move with that name!";
-} */
-
 $MTitle=($_GET['MTitle']); 
-/*$MRate=($_GET['MRating']); */
+$MRate=($_GET['mpaa_rating']); 
 $Genre=($_GET['Genre']); 
-/*$SRate=($_GET['SRating']); */
+$SRate=($_GET['Rating']); 
 $Year=($_GET['Year']); 
 $Runtime=($_GET['Runtime']); 
 $TRelease=($_GET['TRelease']); 
 $DRelease=($_GET['DRelease']); 
 $Actors=($_GET['Actors']); 
-/*$=Save($_GET['save']); // to upload image   */
+$Save=($_GET['save']); // to upload image  
 $Studio=($_GET['Studio']); 
 $Plot=($_GET['Plot']); 
-/*$Vtype=($_GET['VType']); */
+$Vtype=($_GET['video_type']); 
 
 
 // sql to insert into table 																							add cover (upload image)
