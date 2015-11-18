@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 $MTitle=($_GET['MTitle']); 
-$MRate=($_GET['mpaa_rating']); 
+$MRate=($_GET['Rating[]']); 
 $Genre=($_GET['Genre']); 
 $SRate=($_GET['Rating']); 
 $Year=($_GET['Year']); 
@@ -22,10 +22,10 @@ $Runtime=($_GET['Runtime']);
 $TRelease=($_GET['TRelease']); 
 $DRelease=($_GET['DRelease']); 
 $Actors=($_GET['Actors']); 
-$Save=($_GET['save']); // to upload image  
+$Save=($_GET['AddVideo']); // to upload image  
 $Studio=($_GET['Studio']); 
 $Plot=($_GET['Plot']); 
-$Vtype=($_GET['video_type']); 
+$Vtype=($_GET['VType[]']); 
 
 
 // sql to insert into table 																							add cover (upload image)

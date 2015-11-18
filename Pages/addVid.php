@@ -13,6 +13,7 @@
 <div class='center'>
 
     <?php
+		
         require("../Templates/header.php");
 		require("../Templates/sidebar.php"); 
     ?>
@@ -185,7 +186,7 @@
 
             <p>
             <!--Buttons-->
-            <input type="Submit" value ="Save" name="Add Video" />
+            <input type="Submit" value ="Save" name="AddVideo" />
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>

@@ -13,12 +13,12 @@
 <div class='center'>
 
 	<?php
-	
 		require("../Templates/header.php"); 
 		require("../Templates/sidebar.php"); 
 	?>
 
     <div class = 'right'>
+	<form action= "../Scripts/Edit.php" method "post">
         <ul>
             <!--Title of Movie-->
             <li>
@@ -193,6 +193,7 @@
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>
+	<form>
     </div>
 </div>
 </body>

@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     echo "There is already a move with that name!";
 }  */
 
-$MTitle=($_GET['MTitle']); 
+/*$MTitle=($_GET['MTitle']); 
 $MRate=($_GET['Rating[]']); 
 $Genre=($_GET['Genre']); 
 $SRate=($_GET['Rating']); 
@@ -32,20 +32,20 @@ $Save=($_GET['AddVideo']); // to upload image
 $Studio=($_GET['Studio']); 
 $Plot=($_GET['Plot']); 
 $Vtype=($_GET['VType[]']); 
-
+ */
 
 
 // sql to insert into table 																							add cover (upload image)
-$sql = "SELECT title, genre, actors, MPAA, relType, stars, runtime, theatRelese, homeRelease, studio, plot FROM Movie
-WHERE  $MTitle == title
+$sql = "SELECT title FROM Movie ";
+$result = $conn->query($sql);
 
-"//add cover
-;
-
-if ($conn->query($sql) === TRUE) {
-    echo "Successfully added to table!";
+if ($result->num_rows > 0) {
+     // output data of each row
+     while($row = $result->fetch_assoc()) {
+         echo "<br> - Name: ". $row["title"].  "<br>";
+     }
 } else {
-    echo "Error adding to table: " . $conn->error;
+     echo "0 results";
 }
 
 $conn->close();
