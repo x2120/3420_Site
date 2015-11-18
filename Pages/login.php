@@ -12,7 +12,6 @@
 <div class='center'>
 
 	<?php
-		require("../Scripts/login_script.php");
 		require("../Templates/header.php"); 
 		require("../Templates/sidebar.php"); 
 	?>

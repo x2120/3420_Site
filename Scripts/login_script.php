@@ -1,10 +1,16 @@
 <?php
-    $db_path = "localhost";
-    $username = "justinvuong";
-    $user_password = "1234";
-    $db_name = "justinvuong";
+    $servername = "localhost";
+	$username = "justinvuong";
+	$password = "1234";
+	$dbname = "justinvuong";
 
-	$db_connect = new mysqli($db_path, $username, $password, $db_name) or die("cannot connect"); 
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+
+	// Check connection
+
+	if ($conn->connect_error)
+		{ die("Connection failed: " . $conn->connect_error); }
 	
 	$username = $_POST["username"];
 	$password = $_POST["password"];
