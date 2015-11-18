@@ -1,3 +1,57 @@
+<?php
+$servername = "localhost";
+$username = "justinvuong";
+$password = "1234";
+$dbname = "justinvuong";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+//compare table values if 2 are the same spits out an error
+
+/* if () == TRUE) {
+    echo "There is already a move with that name!";
+}  */
+
+$MTitle=($_GET['MTitle']);
+/*
+$MRate=($_GET['Rating[]']); 
+$Genre=($_GET['Genre']); 
+$SRate=($_GET['Rating']); 
+$Year=($_GET['Year']); 
+$Runtime=($_GET['Runtime']); 
+$TRelease=($_GET['TRelease']); 
+$DRelease=($_GET['DRelease']); 
+$Actors=($_GET['Actors']); 
+$Save=($_GET['AddVideo']); // to upload image  
+$Studio=($_GET['Studio']); 
+$Plot=($_GET['Plot']); 
+$Vtype=($_GET['VType[]']); 
+ */
+
+
+// sql to insert into table 																							add cover (upload image)
+$sql = "SELECT  title, genre, cover, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot FROM Movie  WHERE  title LIKE '$MTitle' " ;
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+     // output data of each row
+     
+	 
+} 
+else {
+     echo "There were no results";
+}
+
+$conn->close();
+?> 
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
@@ -26,7 +80,7 @@
                     Title:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="MTitle" />
+                    <input type="textboxes" value ="<?php while($row = $result->fetch_assoc()) {echo $row["title"]; }?>" name="MTitle" />
                 </div>
             
             </li>
@@ -37,7 +91,7 @@
                 </div>
                 <div class = 'box_field'>
                     <select name="Rating" onchange="" size="1">
-					<option selected="selected" value="start"> <?php echo $row['MRating']; ?></option>
+					<option selected="selected" value="<?php while($row = $result->fetch_assoc()) {echo $row["stars"]; }?>"> </option>
                         <option value="01">1</option>
                         <option value="02">2</option>
                         <option value="03">3</option>
@@ -59,7 +113,7 @@
                 </div>
                 <div class = 'box_field'>
                     <select name="Genre" onchange="" size="1">
-					<option selected="selected" value="start"> <?php echo $row['Genre']; ?></option>
+					<option selected="selected" value="<?php while($row = $result->fetch_assoc()) {echo $row["genre"]; }?>"> </option>
                         <option value="01">Action</option>
                         <option value="02">Adventure</option>
                         <option value="03">Animation</option>
@@ -88,7 +142,7 @@
                 <form>
                     <fieldset id = 'mpaa_rating'>
                         <legend> MPAA Rating </legend>
-						<option checked="checked" value="<?php echo $row['MRating']; ?>" hidden> </option>  
+						<option checked="checked" value="<?php while($row = $result->fetch_assoc()) {echo $row["MPAA"]; }?>" hidden> </option>  
                         <input type="radio" name="Rating[]" value ="1" /> G
                         <input type="radio" name="Rating[]" value ="2" /> PG
                         <input type="radio" name="Rating[]" value ="3" /> PG-13
@@ -104,7 +158,7 @@
                     Year:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row['Year'];?>" name="Year" />
+                    <input type="textboxes" value ="<?php while($row = $result->fetch_assoc()) {echo $row["title"]; }?>" name="Year" />
                 </div>
             
             </li>
@@ -114,7 +168,7 @@
                     Runtime:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row['Runtime'];?>" name="Runtime" />
+                    <input type="textboxes" value ="<?php while($row = $result->fetch_assoc()) {echo $row["runtime"]; }?>" name="Runtime" />
                 </div>    
             </li>
             <!--Theater Release-->
@@ -123,7 +177,7 @@
                     TRelease:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row['TRelease'];?>" name="TRelease" />
+                    <input type="textboxes" value ="<<?php while($row = $result->fetch_assoc()) {echo $row["theatRelease"]; }?>" name="TRelease" />
                 </div>    
             </li>
             <!--DVD-->
@@ -132,7 +186,7 @@
                     DRelease:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row['DRelease'];?>" name="DRelease" />
+                    <input type="textboxes" value ="<?php while($row = $result->fetch_assoc()) {echo $row["homeRelease"]; }?>" name="DRelease" />
                 </div>    
             </li>
             <!--Actors-->
@@ -141,7 +195,7 @@
                     Actors:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row['Actors'];?>" name="Actors" />
+                    <input type="textboxes" value ="<?php while($row = $result->fetch_assoc()) {echo $row["actors"]; }?>" name="Actors" />
                 </div>    
             
             </li>
@@ -151,7 +205,7 @@
                     Cover:
                 </div>
                 <div class = 'box_field'>
-                    <input type="file" value ="<?php echo $row[''];?>" name="IUpload" />
+                    <input type="file" value ="" name="IUpload" />
                 </div>    
             </li>
             <!--Studio-->
@@ -160,7 +214,7 @@
                     Studio:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row['Studio'];?>" name="Studio" />
+                    <input type="textboxes" value ="<?php while($row = $result->fetch_assoc()) {echo $row["studio"]; }?>" name="Studio" />
                 </div>    
             </li>
             <!--Plot-->
@@ -169,7 +223,7 @@
                     Plot:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row['Plot'];?>" name="Plot" />
+                    <input type="textboxes" value ="<?php while($row = $result->fetch_assoc()) {echo $row["plot"]; }?>" name="Plot" />
                 </div>    
             </li>
             <!--Video Type-->
@@ -177,7 +231,7 @@
                 <form>
                 <fieldset id = 'video_type'>
                     <legend> Video Type </legend>
-					<option checked="checked" value="<?php echo $row['VType']; ?>" hidden> </option>
+					<option checked="checked" value="<?php while($row = $result->fetch_assoc()) {echo $row["title"]; }?>" hidden> </option>
                     <input type="checkbox" name="VType[]" value ="1" /> DVD
                     <input type="checkbox" name="VType[]" value ="2" /> BluRay
                     <input type="checkbox" name="VType[]" value ="3" /> Digital SD

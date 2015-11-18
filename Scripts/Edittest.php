@@ -19,8 +19,9 @@ if ($conn->connect_error) {
     echo "There is already a move with that name!";
 }  */
 
-$MTitle=($_GET['MTitle']); 
-/*$MRate=($_GET['Rating[]']); 
+$MTitle=($_GET['MTitle']);
+/*
+$MRate=($_GET['Rating[]']); 
 $Genre=($_GET['Genre']); 
 $SRate=($_GET['Rating']); 
 $Year=($_GET['Year']); 
@@ -36,14 +37,15 @@ $Vtype=($_GET['VType[]']);
 
 
 // sql to insert into table 																							add cover (upload image)
-$sql = "SELECT title FROM Movie  WHERE  title LIKE '$MTitle' ";
+$sql = "SELECT  title, genre, cover, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot FROM Movie  WHERE  title LIKE '$MTitle' " ;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
      // output data of each row
-     while($row = $result->fetch_assoc()) {
-         echo "<br> - Name: ". $row["title"].  "<br>";
-     }
+     while($row = $result->fetch_assoc()) 
+	 {
+	 echo $row["title"] . $row["plot"] .  $row["runtime"];
+	 }
 	 
 } 
 else {
