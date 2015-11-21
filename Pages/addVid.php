@@ -37,17 +37,17 @@
                     Rating: 
                 </div>
                 <div class = 'box_field'>
-                    <select name="Rating" onchange="" size="1">
-                        <option value="01">1</option>
-                        <option value="02">2</option>
-                        <option value="03">3</option>
-                        <option value="04">4</option>
-                        <option value="05">5</option>
-                        <option value="06">6</option>
-                        <option value="07">7</option>
-                        <option value="08">8</option>
-                        <option value="09">9</option>
-                        <option value="10">10</option>
+                    <select  onchange="" size="1">
+                        <option name="SRating" value="01">1</option>
+                        <option name="SRating" value="02">2</option>
+                        <option name="SRating" value="03">3</option>
+                        <option name="SRating" value="04">4</option>
+                        <option name="SRating" value="05">5</option>
+                        <option name="SRating" value="06">6</option>
+                        <option name="SRating" value="07">7</option>
+                        <option name="SRating" value="08">8</option>
+                        <option name="SRating" value="09">9</option>
+                        <option name="SRating" value="10">10</option>
                     </select>
                 </div>
             

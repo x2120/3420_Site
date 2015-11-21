@@ -118,11 +118,11 @@ $conn->close();
                     <fieldset id = 'mpaa_rating'>
                         <legend> MPAA Rating </legend>
 						<option checked="checked" value="<?php echo $row["MPAA"]; ?>" hidden> </option>  
-                        <input type="radio" name="Rating[]" value ="1" /> G
-                        <input type="radio" name="Rating[]" value ="2" /> PG
-                        <input type="radio" name="Rating[]" value ="3" /> PG-13
-                        <input type="radio" name="Rating[]" value ="4" /> R
-                        <input type="radio" name="Rating[]" value ="5" /> NC-17
+                        <input type="radio" name="Rating" value ="1" /> G
+                        <input type="radio" name="Rating" value ="2" /> PG
+                        <input type="radio" name="Rating" value ="3" /> PG-13
+                        <input type="radio" name="Rating" value ="4" /> R
+                        <input type="radio" name="Rating" value ="5" /> NC-17
                     </fieldset>
                 </form>
 				

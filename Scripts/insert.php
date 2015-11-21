@@ -14,9 +14,9 @@ if ($conn->connect_error) {
 }
 
 $MTitle=($_GET['MTitle']); 
-$MRate=($_GET['Rating[]']); 
+$MRate=($_GET['Rating']); 
 $Genre=($_GET['Genre']); 
-$SRate=($_GET['Rating']); 
+$SRate=($_GET['SRating']); 
 $Year=($_GET['Year']); 
 $Runtime=($_GET['Runtime']); 
 $TRelease=($_GET['TRelease']); 
