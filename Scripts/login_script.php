@@ -5,15 +5,17 @@
 	$dbname = "justinvuong";
 
 	// Create connection
-	$conn = new mysqli($servername, $server_username, $server_password, $dbname);
+	$conn = mysql_connect($servername, $server_username, $server_password, $dbname);
+	if ($conn == true)
+		{ echo "<p>Woot it's working</p>"; }
 
 	// Check connection
 
-	if ($conn->connect_error)
+	if ($conn == 0)
 		{ die("Connection failed: " . $conn->connect_error); }
 	
-	$client_username = $_POST["client_username"];
-	$client_password = $_POST["client_password"];
+	$client_username = isset($_POST["client_username"]);
+	$client_password = isset($_POST["client_password"]);
 
 	$client_username = stripslashes($client_username);
 	$client_password = stripslashes($client_password);
@@ -21,6 +23,7 @@
 	$client_password = mysql_real_escape_string($client_password);
 
 	$sql = "SELECT * FROM User WHERE name = '$client_username' and password = '$client_password' ";
+
 	$result = mysql_query($sql);
 	$count = mysql_num_rows($result);
 
@@ -39,8 +42,7 @@
 	    }
 	    
 	    // Gets current cookies params.
-	    $cookieParams = session_get_cookie_params();
-	    session_set_cookie_params($cookieParams["lifetime"], $cookieParams["path"], $cookieParams["domain"], $secure, $httponly);
+	    setcookie('Username', $client_username, time() + (86400 * 30), "/");
 	    
 	    // Sets the session name to the one set above.
 	    session_name($session_name);
@@ -53,7 +55,7 @@
 	else
 		{ echo "Wrong Username or Password"; }
 
-	$conn->close();
+	mysql_close($conn);
 ?>
     
     <!-- //check if logged in

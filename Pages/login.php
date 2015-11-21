@@ -12,8 +12,8 @@
 <div class='center'>
 
 	<?php
-		require("../Templates/header.php"); 
-		require("../Templates/sidebar.php"); 
+		require "../Templates/header.php"; 
+		require "../Templates/sidebar.php"; 
 	?>
 
 	<div class = 'right'>
