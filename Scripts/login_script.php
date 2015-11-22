@@ -43,15 +43,15 @@ class Login
 				if ($row_count == 1)
 				{
 					$result_row = $result->fetch_object();
-					if (password_verify($_POST['client_password'], $result->client_password_hash))
-					{
+					// if (password_verify($_POST['client_password'], $result->client_password_hash))
+					// {
 						$_SESSION['client_username'] = $result->client_username;
 						$_SESSION['client_email'] = $result->client_email;
 						$_SESSION['user_login_status'] = 1;
-					}
-
-					else
-						{ $this->errors[] = "Login error"; }
+					// }
+					// 
+					// else
+					// 	{ $this->errors[] = "Login error"; }
                 }
 				else
 					{ $this->errors[] = "Login error"; }
@@ -73,46 +73,4 @@ class Login
         session_destroy();
 	}
 }
-	
-
-	// if ($result == false)
-	// {
-	// 	echo "<p>Query Error</p>";
-	// 	mysql_close($conn);
-	// }
-	
-	// else
-	// { 
-	// 	$count = mysql_num_rows($result); 
-	// 	//if results match, then count = 1
-	// 	if($count == 1)
-	// 	{
-	// 		//session creation
-	// 		$session_name = 'sec_session_id';
-	// 		$secure = SECURE;
-				
-	// 		// Forces sessions to only use cookies.
-	// 		if (ini_set('session.use_only_cookies', 1) === FALSE)
-	// 		{
-	// 			header("Location: ../error.php?err=Could not initiate a safe session (ini_set)");
-	// 			exit();
-	// 		}
-			
-	// 		// Gets current cookies params.
-	// 		setcookie('Username', $client_username, time() + (86400 * 30), "/");
-			
-	// 		// Sets the session name to the one set above.
-	// 		session_name($session_name);
-	// 		session_start();
-	// 		session_regenerate_id(true);
-
-	// 		echo "<p>Login successful</p>";
-	// 	}
-		
-	// 	else
-	// 		{ echo "Wrong Username or Password"; }
-
-	// 	mysql_close($conn);
-	// }
 ?>
-
