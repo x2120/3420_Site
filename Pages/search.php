@@ -4,7 +4,7 @@
 <head>
 	<link type='text/css' rel='stylesheet' href='../CSS/general.css' />
 	<meta charset="utf-8">
-	<title>Add video</title>
+	<title>Search videos</title>
 	<meta name="Add video" content="Add video to personal database">
 </head>
 
@@ -12,6 +12,7 @@
 <div class='center'>
 
 	<?php
+		require("../Scripts/search_db.php");
 		require("../Templates/header.php"); 
 		require("../Templates/sidebar.php"); 
 	?>
@@ -21,12 +22,22 @@
 			<ul>
 				<!--Movie Search-->
 				<li>
+
 					<div class = 'Search'>
 						Search for movie:
 					</div>
 					<div class = 'box_field'>
-						<form name = "Search" action = "search_DB.php" method = "post">
-							<input type= "text" name = "search" value = "search_param"/>
+						<form name = "search" action = "../Scripts/search_db.php" method = "post">
+							<input type= "text" name = "search" value = ""/>
+							<select name = "search_type" selected="selected" value="start">
+		                        <option value="Title">Title</option>
+		                        <option value="MPAA Rating">MPAA Rating</option>
+		                        <option value="Genre">Genre</option>
+		                        <option value="Star Rating">Star Rating</option>
+		                        <option value="Year">Year</option>
+		                        <option value="Actors">Actors</option>
+		                        <option value="Studio">Studio</option>
+		                    </select>
 							<input type= "button" name = "SButton" value = "Search"/>
 						</form>
 					</div>

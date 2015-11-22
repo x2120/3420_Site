@@ -13,10 +13,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+//compare table values if 2 are the same spits out an error
+
+/* if () == TRUE) {
+    echo "There is already a move with that name!";
+}  */
+
 $MTitle=($_GET['MTitle']); 
-$MRate=($_GET['Rating']); 
+/*$MRate=($_GET['Rating[]']); 
 $Genre=($_GET['Genre']); 
-$SRate=($_GET['SRating']); 
+$SRate=($_GET['Rating']); 
 $Year=($_GET['Year']); 
 $Runtime=($_GET['Runtime']); 
 $TRelease=($_GET['TRelease']); 
@@ -26,17 +32,22 @@ $Save=($_GET['AddVideo']); // to upload image
 $Studio=($_GET['Studio']); 
 $Plot=($_GET['Plot']); 
 $Vtype=($_GET['VType[]']); 
+ */
 
 
 // sql to insert into table 																							add cover (upload image)
-$sql = "INSERT INTO Movie (title, genre, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot)
-VALUES ('$MTitle','$Genre','$Actors','$MRate','$Vtype','$SRate','$Runtime','$TRelease','$DRelease','$Studio','$Plot') "//add cover
-;
+$sql = "SELECT title FROM Movie  WHERE  title LIKE '$MTitle' ";
+$result = $conn->query($sql);
 
-if ($conn->query($sql) === TRUE) {
-    echo "Successfully added to table!";
-} else {
-    echo "Error adding to table: " . $conn->error;
+if ($result->num_rows > 0) {
+     // output data of each row
+     while($row = $result->fetch_assoc()) {
+         echo "<br> - Name: ". $row["title"].  "<br>";
+     }
+	 
+} 
+else {
+     echo "There were no results";
 }
 
 $conn->close();

@@ -14,9 +14,9 @@ if ($conn->connect_error) {
 }
 
 $MTitle=($_GET['MTitle']); 
-$MRate=($_GET['Rating']); 
+$MRate=($_GET['Rating[]']); 
 $Genre=($_GET['Genre']); 
-$SRate=($_GET['SRating']); 
+$SRate=($_GET['Rating']); 
 $Year=($_GET['Year']); 
 $Runtime=($_GET['Runtime']); 
 $TRelease=($_GET['TRelease']); 
@@ -29,6 +29,8 @@ $Vtype=($_GET['VType[]']);
 
 
 // sql to insert into table 																							add cover (upload image)
+$sql = "DELETE FROM Movie WHERE title = '$MTitle' ";
+
 $sql = "INSERT INTO Movie (title, genre, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot)
 VALUES ('$MTitle','$Genre','$Actors','$MRate','$Vtype','$SRate','$Runtime','$TRelease','$DRelease','$Studio','$Plot') "//add cover
 ;
