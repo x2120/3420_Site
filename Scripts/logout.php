@@ -41,7 +41,7 @@
 
 	<div class = 'right'>
 		<p> 
-			Delete Video
+			Logout
 		</p>
 	</div>
 </div>

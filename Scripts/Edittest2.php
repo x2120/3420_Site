@@ -36,9 +36,12 @@ $Vtype=($_GET['VType[]']);
  */
 
 
+
 // sql to insert into table 																							add cover (upload image)
-$sql = "SELECT  title, genre, cover, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot FROM Movie  WHERE  title LIKE '$MTitle' " ;
-$result = $conn->query($sql);
+$query = "SELECT  title, genre, cover, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot FROM Movie  WHERE  title LIKE '$MTitle' " ;
+$results = mysqli_query($conn,$query) or die ("3. Error retrieveing movie information from databse");
+$row = mysqli_fetch_array($results);
+
 
 if ($result->num_rows > 0) {
      // output data of each row

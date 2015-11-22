@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
@@ -9,36 +8,17 @@
 </head>
 
 <body>
+
+
 <div class='center'>
 
-    <div class="toplogo">
-        <img src = "../Images/movie-reel.jpg" alt="reel" style="width:100px;height:80px;">
-    </div>
-    
-    <div class="tophead">
-        <h1><span ID='logoColor'>MyVid</span> Collection</h1>
-        <p>An individual Video Libary</p><br>
-    </div>
-
-    <!-- Left sidebar and site navigation -->
-    <div class='left'>
-        <br>
-        <ul>
-            <li class='button'><a href="index.html">Home</a></li>
-            <li class='button'><a href="register.html">Create Account</a></li>
-            <li class='button'><a href="profile.html">Edit Account</a></li>
-            <li class='button'><a href="../PHP/leave.php">Delete Account</a></li>
-            <li class='button'><a href="addVid.html">Add Video</a></li>
-            <li class='button'><a href="editVid.html">Edit Video</a></li>
-            <li class='button'><a href="../PHP/deleteVid.php">Delete Video</a></li>
-            <li class='button'><a href="search.html">Search</a></li>
-            <li class='button'><a href="displayDetails.html">Display Details</a></li>
-            <li class='button'><a href="login.html">Login</a></li>
-            <li class='button' ID='inv_button'><a href="../PHP/logout.php">Logout</a></li>
-        </ul>
-    </div>
+	<?php
+		require("../Templates/header.php"); 
+		require("../Templates/sidebar.php"); 
+	?>
 
     <div class = 'right'>
+	<form action= "../Scripts/edit.php" method "post">
         <ul>
             <!--Title of Movie-->
             <li>
@@ -46,7 +26,7 @@
                     Title:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="MTitle" />
+                    <input type="textboxes" value ="<?php echo $row['MTitle'];?>" name="MTitle" />
                 </div>
             
             </li>
@@ -57,6 +37,7 @@
                 </div>
                 <div class = 'box_field'>
                     <select name="Rating" onchange="" size="1">
+					<option selected="selected" value="start"> <?php echo $row['MRating']; ?></option>
                         <option value="01">1</option>
                         <option value="02">2</option>
                         <option value="03">3</option>
@@ -78,6 +59,7 @@
                 </div>
                 <div class = 'box_field'>
                     <select name="Genre" onchange="" size="1">
+					<option selected="selected" value="start"> <?php echo $row['Genre']; ?></option>
                         <option value="01">Action</option>
                         <option value="02">Adventure</option>
                         <option value="03">Animation</option>
@@ -106,13 +88,15 @@
                 <form>
                     <fieldset id = 'mpaa_rating'>
                         <legend> MPAA Rating </legend>
-                        <input type="checkbox" name="Rating[]" value ="1" /> G
-                        <input type="checkbox" name="Rating[]" value ="2" /> PG
-                        <input type="checkbox" name="Rating[]" value ="3" /> PG-13
-                        <input type="checkbox" name="Rating[]" value ="4" /> R
-                        <input type="checkbox" name="Rating[]" value ="5" /> NC-17
+						<option checked="checked" value="<?php echo $row['MRating']; ?>" hidden> </option>  
+                        <input type="radio" name="Rating[]" value ="1" /> G
+                        <input type="radio" name="Rating[]" value ="2" /> PG
+                        <input type="radio" name="Rating[]" value ="3" /> PG-13
+                        <input type="radio" name="Rating[]" value ="4" /> R
+                        <input type="radio" name="Rating[]" value ="5" /> NC-17
                     </fieldset>
                 </form>
+				
             </li>			 
             <!--Year Movie Release-->
             <li>
@@ -120,7 +104,7 @@
                     Year:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Year" />
+                    <input type="textboxes" value ="<?php echo $row['Year'];?>" name="Year" />
                 </div>
             
             </li>
@@ -130,7 +114,7 @@
                     Runtime:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Runtime" />
+                    <input type="textboxes" value ="<?php echo $row['Runtime'];?>" name="Runtime" />
                 </div>    
             </li>
             <!--Theater Release-->
@@ -139,7 +123,7 @@
                     TRelease:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="TRelease" />
+                    <input type="textboxes" value ="<?php echo $row['TRelease'];?>" name="TRelease" />
                 </div>    
             </li>
             <!--DVD-->
@@ -148,7 +132,7 @@
                     DRelease:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="DRelease" />
+                    <input type="textboxes" value ="<?php echo $row['DRelease'];?>" name="DRelease" />
                 </div>    
             </li>
             <!--Actors-->
@@ -157,7 +141,7 @@
                     Actors:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Actors" />
+                    <input type="textboxes" value ="<?php echo $row['Actors'];?>" name="Actors" />
                 </div>    
             
             </li>
@@ -167,7 +151,7 @@
                     Cover:
                 </div>
                 <div class = 'box_field'>
-                    <input type="Button" value ="Choose File" name="save" />
+                    <input type="file" value ="<?php echo $row[''];?>" name="IUpload" />
                 </div>    
             </li>
             <!--Studio-->
@@ -176,7 +160,7 @@
                     Studio:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Studio" />
+                    <input type="textboxes" value ="<?php echo $row['Studio'];?>" name="Studio" />
                 </div>    
             </li>
             <!--Plot-->
@@ -185,7 +169,7 @@
                     Plot:
                 </div>
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Plot" />
+                    <input type="textboxes" value ="<?php echo $row['Plot'];?>" name="Plot" />
                 </div>    
             </li>
             <!--Video Type-->
@@ -193,6 +177,7 @@
                 <form>
                 <fieldset id = 'video_type'>
                     <legend> Video Type </legend>
+					<option checked="checked" value="<?php echo $row['VType']; ?>" hidden> </option>
                     <input type="checkbox" name="VType[]" value ="1" /> DVD
                     <input type="checkbox" name="VType[]" value ="2" /> BluRay
                     <input type="checkbox" name="VType[]" value ="3" /> Digital SD
@@ -204,10 +189,11 @@
 
             <p>
             <!--Buttons-->
-            <input type="Button" value ="Save" name="Add Video" />
+            <input type="Submit" value ="Save" name="Add Video" />
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>
+	<form>
     </div>
 </div>
 </body>
