@@ -1,7 +1,6 @@
 <?php
 class Login
 {
-	public $conn = null;
 	public $errors = array();
 	public $messages = array();
 
@@ -16,8 +15,7 @@ class Login
 
 	public function login_function()
 	{
-		echo "<p>Wu-tang</p>";
-
+		$conn = "";
 		$servername = "localhost";
 		$username = "justinvuong";
 		$password = "1234";
@@ -26,28 +24,33 @@ class Login
 
 		if (!empty($_POST['client_username']) && !empty($_POST['client_password']))
 		{
-			echo "<p>Wu-tang</p>";
 			// Create connection
 			$this->conn = new mysqli($servername, $username, $password, $dbname);
 			// Check connection
-			if ($conn->connect_error)
-				{ die('Connect Error (' . $conn->connect_errno . ') '. $conn->connect_error); }
+			if ($this->conn->connect_errno)
+				{ die($this->errors[] = 'Connect Error (' . $conn->connect_errno); }
 			else
 			{
-				$client_username = isset($_POST["client_username"]);
-				$client_password = isset($_POST["client_password"]);
+				$client_username = $_POST["client_username"];
+				$client_password = $_POST["client_password"];
 
 				$client_username = stripslashes($client_username);
 				$client_password = stripslashes($client_password);
-				$client_username = mysqli_real_escape_string($conn, $client_username);
-				$client_password = mysqli_real_escape_string($conn, $client_password);
+				$client_username = $this->conn->real_escape_string($client_username);
+				$client_password = $this->conn->real_escape_string($client_password);
 
 				$sql = "SELECT * FROM User WHERE name = '$client_username' and password = '$client_password'";
-				$result = mysqli_query($sql) or trigger_error(mysqli_error()." ".$sql);
+				$result = $this->conn->query($sql);
+				$row_count = $result->num_rows;
+				if ($row_count == 1)
+				{
+					$result_row = $result->fetch_object();
+					$_SESSION['$client_username'] = $result_row->$client_username;
+                    $_SESSION['user_login_status'] = 1;
+                }
+				else
+					{ $this->errors[] = "Login error"; }
 			}
-
-			if ($result->num_rows == 1)
-			{ echo "<p>Woot</p>"; }
 		}
 	}
 
@@ -57,6 +60,12 @@ class Login
 			{ return true; }
 		else
 			{ return false; }
+	}
+
+	public function logout()
+	{
+		$_SESSION = array();
+        session_destroy();
 	}
 }
 	
