@@ -3,27 +3,17 @@ $servername = "localhost";
 $username = "justinvuong";
 $password = "1234";
 $dbname = "justinvuong";
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 // Check connection
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-
 $MTitle=($_GET['MTitle']);
-
-
 // sql to insert into table 																							add cover (upload image)
 $sql = "SELECT  title, genre, cover, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot FROM Movie  WHERE  title LIKE '$MTitle' " ;
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
-
-
-
 $conn->close();
 ?> 
 
