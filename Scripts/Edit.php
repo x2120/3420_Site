@@ -56,7 +56,7 @@ $conn->close();
                 </div>
                 <div class = 'box_field'>
                     <select name="Rating" onchange="" size="1">
-					<option selected="selected" value="<?php echo $row["stars"]; ?>"> </option>
+					<option selected="selected" value="start"><?php echo $row["stars"]; ?> </option>
                         <option value="01">1</option>
                         <option value="02">2</option>
                         <option value="03">3</option>
