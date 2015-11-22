@@ -14,6 +14,21 @@
 	<?php
 		require "../Templates/header.php"; 
 		require "../Templates/sidebar.php";
+
+		if (isset($login))
+		{
+			if ($login->errors)
+			{
+				foreach ($login->errors as $error) 
+					{ echo $error; }
+			}
+			
+			if ($login->messages)
+			{
+				foreach ($login->messages as $message)
+					{ echo $message; }
+			}
+		}
 	?>
 
 	<div class = 'right'>

@@ -8,9 +8,7 @@ class Login
 	{
 		session_start();
 		if (isset($_POST["login"]))
-		{ 
-			$this->login_function();			
-		}
+			{ $this->login_function(); }
 	}	
 
 	public function login_function()
@@ -45,8 +43,15 @@ class Login
 				if ($row_count == 1)
 				{
 					$result_row = $result->fetch_object();
-					$_SESSION['$client_username'] = $result_row->$client_username;
-                    $_SESSION['user_login_status'] = 1;
+					if (password_verify($_POST['client_password'], $result->client_password_hash))
+					{
+						$_SESSION['client_username'] = $result->client_username;
+						$_SESSION['client_email'] = $result->client_email;
+						$_SESSION['user_login_status'] = 1;
+					}
+
+					else
+						{ $this->errors[] = "Login error"; }
                 }
 				else
 					{ $this->errors[] = "Login error"; }
