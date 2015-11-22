@@ -26,18 +26,8 @@ $servername = "localhost";
 $username = "justinvuong";
 $password = "1234";
 $dbname = "justinvuong";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
 $MTitle=($_GET['MTitle']); 
-$MRate=($_GET['Rating']); 
+$MRate=($_GET['Rating']);  
 $Genre=($_GET['Genre']); 
 $SRate=($_GET['SRating']); 
 $Year=($_GET['Year']); 
@@ -48,12 +38,24 @@ $Actors=($_GET['Actors']);
 $Save=($_GET['AddVideo']); // to upload image  
 $Studio=($_GET['Studio']); 
 $Plot=($_GET['Plot']); 
-$VType=($_GET['type']); 
+$Storage=($_GET['Storage']);
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+
 
 
 // sql to insert into table 																							add cover (upload image)
-$sql = "INSERT INTO Movie (title, genre, actors, MPAA, relType, stars, runtime, theatRelease, homeRelease, studio, plot)
-VALUES ('$MTitle','$Genre','$Actors','$MRate','$VType','$SRate','$Runtime','$TRelease','$DRelease','$Studio','$Plot') "//add cover
+$sql = "INSERT INTO Movie (	title, 		genre, 		actors, 	MPAA, 		relType, 		stars, 		runtime, 		theatRelease, 		homeRelease, 	studio, 	plot)
+VALUES (					'$MTitle',	'$Genre',	'$Actors',	'$MRate',	'$Storage',		'$SRate',	'$Runtime',		'$TRelease',		'$DRelease','	$Studio',	'$Plot') "//add cover
 ;
 
 if ($conn->query($sql) === TRUE) {
