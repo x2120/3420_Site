@@ -24,7 +24,7 @@
 
 	$sql = "SELECT * FROM User WHERE name = '$client_username' and password = '$client_password' ";
 
-	$result = mysql_query($sql);
+	$result = mysql_query($sql) or trigger_error(mysql_error()." ".$sql);
 	$count = mysql_num_rows($result);
 
 	//if results match, then count = 1

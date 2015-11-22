@@ -19,7 +19,8 @@
     ?>
 
     <div class = 'right'>
-	<form action= "../Scripts/insert.php" method "post">
+	<form action= "../Scripts/insert.php" method "post" enctype="multipart/form-data">
+	
         <ul>
             <!--Title of Movie-->
             <li>
@@ -37,17 +38,17 @@
                     Rating: 
                 </div>
                 <div class = 'box_field'>
-                    <select  onchange="" size="1">
-                        <option name="SRating" value="01">1</option>
-                        <option name="SRating" value="02">2</option>
-                        <option name="SRating" value="03">3</option>
-                        <option name="SRating" value="04">4</option>
-                        <option name="SRating" value="05">5</option>
-                        <option name="SRating" value="06">6</option>
-                        <option name="SRating" value="07">7</option>
-                        <option name="SRating" value="08">8</option>
-                        <option name="SRating" value="09">9</option>
-                        <option name="SRating" value="10">10</option>
+                    <select  name="SRating" onchange="" size="1">
+                        <option  value="01">1</option>
+                        <option  value="02">2</option>
+                        <option  value="03">3</option>
+                        <option  value="04">4</option>
+                        <option  value="05">5</option>
+                        <option  value="06">6</option>
+                        <option  value="07">7</option>
+                        <option  value="08">8</option>
+                        <option  value="09">9</option>
+                        <option  value="10">10</option>
                     </select>
                 </div>
             
@@ -87,11 +88,11 @@
                 <form>
                     <fieldset id = 'mpaa_rating'>
                         <legend> MPAA Rating </legend>
-                        <input type="checkbox" name="Rating[]" value ="1" /> G
-                        <input type="checkbox" name="Rating[]" value ="2" /> PG
-                        <input type="checkbox" name="Rating[]" value ="3" /> PG-13
-                        <input type="checkbox" name="Rating[]" value ="4" /> R
-                        <input type="checkbox" name="Rating[]" value ="5" /> NC-17
+                        <input type="radio" name="Rating" value ="1" /> G
+                        <input type="radio" name="Rating" value ="2" /> PG
+                        <input type="radio" name="Rating" value ="3" /> PG-13
+                        <input type="radio" name="Rating" value ="4" /> R
+                        <input type="radio" name="Rating" value ="5" /> NC-17
                     </fieldset>
                 </form>
             </li>			 
@@ -143,15 +144,6 @@
                 </div>    
             
             </li>
-            <!--IMG Upload-->
-            <li>
-                <div class = 'box_title'>
-                    Cover:
-                </div>
-                <div class = 'box_field'>
-                    <input type="file" value ="" name="IUpload" />
-                </div>    
-            </li>
             <!--Studio-->
             <li>
                 <div class = 'box_title'>
@@ -175,11 +167,11 @@
                 <form>
                 <fieldset id = 'video_type'>
                     <legend> Video Type </legend>
-                    <input type="checkbox" name="VType[]" value ="1" /> DVD
-                    <input type="checkbox" name="VType[]" value ="2" /> BluRay
-                    <input type="checkbox" name="VType[]" value ="3" /> Digital SD
-                    <input type="checkbox" name="VType[]" value ="4" /> Digital HD
-                    <input type="checkbox" name="VType[]" value ="5" /> 3D
+					    <input type="checkbox" name="type" value ="1" /> DVD
+                        <input type="checkbox" name="type" value ="2" /> BluRay
+                        <input type="checkbox" name="type" value ="3" /> Digital SD
+                        <input type="checkbox" name="type" value ="4" /> Digital HD
+                        <input type="checkbox" name="type" value ="5" /> 3D
                 </fieldset>
                 </form>
             </li>
