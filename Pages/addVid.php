@@ -152,20 +152,18 @@
                     <input type="textboxes" value ="" name="Plot" />
                 </div>    
             </li>
-			
-			
             <!--Video Type-->
             <li>
-                
+                <form>
                 <fieldset id = 'video_type'>
                     <legend> Video Type </legend>
-					    <input type="checkbox" name="Storage" value ="1" /> DVD
-                        <input type="checkbox" name="Storage" value ="2" /> BluRay
-                        <input type="checkbox" name="Storage" value ="3" /> Digital SD
-                        <input type="checkbox" name="Storage" value ="4" /> Digital HD
-                        <input type="checkbox" name="Storage" value ="5" /> 3D
+					    <input type="checkbox" name="type" value ="1" /> DVD
+                        <input type="checkbox" name="type" value ="2" /> BluRay
+                        <input type="checkbox" name="type" value ="3" /> Digital SD
+                        <input type="checkbox" name="type" value ="4" /> Digital HD
+                        <input type="checkbox" name="type" value ="5" /> 3D
                 </fieldset>
-                
+                </form>
             </li>
 
             <p>
