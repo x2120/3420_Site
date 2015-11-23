@@ -22,6 +22,7 @@
         <ul>
 			<li>
 			<?php
+			//values from addVid.php
 				$servername = "localhost";
 				$username = "justinvuong";
 				$password = "1234";
@@ -49,9 +50,8 @@
 				}
 
 				// sql to insert into table 																							add cover (upload image)
-				$sql = "INSERT INTO Movie (	title, 		genre, 		actors, 	MPAA, 		relType, 		stars, 		runtime, 		theatRelease, 		homeRelease, 	studio, 	plot)
-				VALUES (					'$MTitle',	'$Genre',	'$Actors',	'$MRate',	'$Storage',		'$SRate',	'$Runtime',		'$TRelease',		'$DRelease','	$Studio',	'$Plot') "//add cover
-				;
+				$sql = "INSERT INTO Movie (	title,genre,actors,MPAA,relType,stars,runtime,theatRelease,homeRelease,studio,plot)
+				VALUES ('$MTitle','$Genre','$Actors','$MRate','$Storage','$SRate','$Runtime','$TRelease','$DRelease','$Studio',	'$Plot') "//add cover;
 
 				if ($conn->query($sql) === TRUE) {
 					echo " Successfully added to table!";
@@ -63,6 +63,7 @@
 				$conn->close();
 			?> 
 			</li>
+			
  <!--IMG Upload-->
             <li>
                 <div class = 'box_title'>

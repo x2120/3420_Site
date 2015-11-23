@@ -1,4 +1,4 @@
-
+<!--Deletes movie from database with the title name given in deleteVid.php-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>

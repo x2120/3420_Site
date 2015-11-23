@@ -1,3 +1,4 @@
+<!--updates the movie from database with the title name given in deleteVid.php-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
@@ -22,10 +23,12 @@
         <ul>         
             <p>
 				<?php
+				//database connection information
 				$servername = "localhost";
 				$username = "justinvuong";
 				$password = "1234";
 				$dbname = "justinvuong";
+				//values given in Edit.php
 				$MTitle=($_GET['MTitle']); 
 				$MRate=($_GET['Rating']);  
 				$Genre=($_GET['Genre']); 
@@ -54,10 +57,12 @@
 				WHERE title='$MTitle';
 				"//add cover
 				;
-
+				
+				//gives you a message when you can upload to the server
 				if ($conn->query($sql) === TRUE) {
 				echo "Successfully Updated the table!";
 				} else {
+				//if you can not connect gives an error
 				echo "Error adding to table: " . $conn->error;
 				}
 

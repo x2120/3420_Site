@@ -1,0 +1,41 @@
+The Login Page Functional:
+
+Create account:
+
+Edit account:
+
+
+Delete account:
+	-Can delete account
+
+The Main Page:
+	-We can upload images but we can’t link them to the database so we cant properly display images for the index.
+
+
+The Add Page:
+	-We can successfully add Movies to the database but we cannot upload images. (Can upload to server but could didn’t have the time to link them in the database)
+
+Edit Page:
+	-Can fully edit all values in the database but same problem as before, we cannot upload images (can upload to server but could didn’t have the time to link them in the database)
+
+
+The Display Details Page:
+	-Can display details of a searched page but cannot View images (can upload to server but could didn’t have the time to link them in the database)
+
+
+The Delete Video
+	-Page Can delete from database but cannot delete files from Image folder.
+
+The Search Page
+	-None we don’t have a working search page
+
+The Logout Page:
+	-Functional
+
+Genre List 
+	-N/A 
+
+Navigation: 
+
+Security:
+	-Complete We have Sql injection
