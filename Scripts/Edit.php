@@ -116,17 +116,7 @@ $conn->close();
                 </form>
 				
             </li>			 
-            <!--Year Movie Release-->
-            <li>
-                <div class = 'box_title'>
-                    Year:
-                </div>
-                <div class = 'box_field'>
-                    <input type="textboxes" value ="<?php echo $row["title"]; ?>" name="Year" />
-                </div>
-            
-            </li>
-            <!--Run Time-->
+             <!--Run Time-->
             <li>
                 <div class = 'box_title'>
                     Runtime:

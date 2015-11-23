@@ -96,17 +96,7 @@
                     </fieldset>
                 </form>
             </li>			 
-            <!--Year Movie Release-->
-            <li>
-            
-			<div class = 'box_title'>
-                    Year:
-                </div>
-                <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Year" />
-                </div>
-            
-            </li>
+
             <!--Run Time-->
             <li>
                 <div class = 'box_title'>
