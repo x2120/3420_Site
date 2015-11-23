@@ -1,5 +1,5 @@
 <?php
-class Registration
+class user_registration
 {
 	public $errors = array();
 	public $messages = array();
@@ -28,27 +28,21 @@ class Registration
 			// if no connection errors (= working database connection)
 			if (!$this->conn->connect_errno)
 			{
-				$client_username = $_POST["client_username"];
-				$client_email = $_POST["client_email"];
-
 				// escaping, additionally removing everything that could be (html/javascript-) code
-				$client_username = stripslashes($client_username);
-				$client_email = stripslashes($client_email);
-				$client_username = $this->conn->real_escape_string($client_username);
-				$client_email = $this->conn->real_escape_string($client_email);
+				$client_username = $this->conn->real_escape_string(strip_tags($_POST['client_username'], ENT_QUOTES));
+                $client_email = $this->conn->real_escape_string(strip_tags($_POST['client_email'], ENT_QUOTES));
 				$client_password = $_POST['client_password'];
-				// $client_password_hash = password_hash($client_password, PASSWORD_DEFAULT);
 
 				// check if user or email address already exists
-				$sql = "SELECT * FROM Users WHERE name = '". $client_username . "' OR email = '" . $client_email . "';";
+				$sql = "SELECT * FROM Users WHERE name = '$client_username' OR email = '$client_email'";
 				$client_username_check = $this->conn->query($sql);
 				if ($client_username_check->num_rows == 1)
-					{ $this->errors[] = "Sorry, that username / email address is already taken."; }
+					{ echo "Sorry, that username / email address is already taken."; }
 				else
 				{
 					// write new user's data into database
 					$sql = "INSERT INTO users (name, password, email)
-							VALUES('" . $client_username . "', '" . $client_email . "', '" . $client_password . "');";
+							VALUES('$client_username', '$client_email', '$client_password')";
 					$user_insert = $this->conn->query($sql);
 					// if user has been added successfully
 					if ($user_insert)

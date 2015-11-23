@@ -1,6 +1,6 @@
 <?php
 require_once "../Scripts/user_registration.php";
-$registration = new Registration();
+$registration = new user_registration();
 
 include "registration.php";
 ?>

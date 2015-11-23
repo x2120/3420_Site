@@ -1,6 +1,6 @@
 <?php
 require_once "../Scripts/login_script.php";
-$login = new Login();
+$login = new login_script();
 
 if ($login->login_check() == true)
     { include("index.php"); } 

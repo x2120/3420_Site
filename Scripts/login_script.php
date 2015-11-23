@@ -1,5 +1,5 @@
 <?php
-class Login
+class login_script
 {
 	public $errors = array();
 	public $messages = array();
@@ -71,6 +71,32 @@ class Login
 	{
 		$_SESSION = array();
         session_destroy();
+	}
+
+	public function deleteAccount()
+	{
+		$conn = '';
+		$servername = "localhost";
+		$username = "justinvuong";
+		$password = "1234";
+		$dbname = "justinvuong";
+		
+		$this->conn = new mysqli($servername, $username, $password, $dbname);
+			// Check connection
+		if ($this->conn->connect_errno)
+		{
+			echo "fuck";
+			die($this->errors[] = 'Connect Error (' . $conn->connect_errno);
+		}
+		else
+		{
+			echo "boosh";
+			$username = $_SESSION['client_username'];
+			$sql = "DELETE FROM User WHERE name = '$username'";
+			$result = $this->conn->query($sql);
+			$_SESSION = array();
+	        session_destroy();	
+		}
 	}
 }
 ?>
