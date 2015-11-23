@@ -1,12 +1,10 @@
-<!-- Asks user for movie title that needs to be edited -->
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
 	<link type='text/css' rel='stylesheet' href='../CSS/general.css' />
 	<meta charset="utf-8">
 	<title>Add video</title>
-	<meta name="Edit Video" content="Add video to personal database">
+	<meta name="Add video" content="Add video to personal database">
 </head>
 
 <body>
