@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!--updates the movie from database with the title name given in deleteVid.php-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
@@ -78,6 +79,8 @@
 </html>
 
 =======
+=======
+>>>>>>> parent of b198e42... What we could get done
 <?php
 $servername = "localhost";
 $username = "justinvuong";
@@ -120,5 +123,9 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+<<<<<<< HEAD
+?> 
+>>>>>>> parent of b198e42... What we could get done
+=======
 ?> 
 >>>>>>> parent of b198e42... What we could get done

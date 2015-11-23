@@ -23,6 +23,7 @@
 			<li>
 			<?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 			//values from addVid.php
 				$servername = "localhost";
 				$username = "justinvuong";
@@ -41,6 +42,8 @@
 				$Plot=($_GET['Plot']); 
 				$Storage=($_GET['Storage']);
 =======
+=======
+>>>>>>> parent of b198e42... What we could get done
 $servername = "localhost";
 $username = "justinvuong";
 $password = "1234";
@@ -58,6 +61,9 @@ $Save=($_GET['AddVideo']); // to upload image
 $Studio=($_GET['Studio']); 
 $Plot=($_GET['Plot']); 
 $Storage=($_GET['Storage']);
+<<<<<<< HEAD
+>>>>>>> parent of b198e42... What we could get done
+=======
 >>>>>>> parent of b198e42... What we could get done
 
 // Create connection
@@ -70,9 +76,12 @@ if ($conn->connect_error) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 				// sql to insert into table 																							add cover (upload image)
 				$sql = "INSERT INTO Movie (	title,genre,actors,MPAA,relType,stars,runtime,theatRelease,homeRelease,studio,plot)
 				VALUES ('$MTitle','$Genre','$Actors','$MRate','$Storage','$SRate','$Runtime','$TRelease','$DRelease','$Studio',	'$Plot') "//add cover;
+=======
+>>>>>>> parent of b198e42... What we could get done
 =======
 >>>>>>> parent of b198e42... What we could get done
 
