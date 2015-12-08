@@ -1,28 +1,33 @@
 <?php
+// mysql connection
 $conn = '';
 $servername = "localhost";
 $username = "justinvuong";
 $password = "1234";
 $dbname = "justinvuong";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-	// Check connection
-if ($conn != 1)
-{
-	echo "fuck";
-	die($this->errors[] = 'Connect Error (' . $conn->connect_errno);
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
 }
+
+// proceeding as normal
 else
 {
+	// deletes entry from user database
 	echo "boosh";
 	$username = $_SESSION['client_username'];
 	$sql = "DELETE FROM User WHERE name = '$username'";
-	$result = mysqli_query($sql);
-	$_SESSION = array();
-    session_destroy();	
+	$result = mysql_query($sql);
+    
+    // destroys session
+    session_destroy();
 }
 ?>
 
+<!-- redirects to index -->
 <html>
 <head>
 	<meta http-equiv="refresh" content="0; url=http://frigg.trentu.ca/~mitchellmiller/3420_site/Pages/index.php" />

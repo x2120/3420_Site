@@ -1,4 +1,5 @@
 <?php
+// relevant functions for user creation
 class user_registration
 {
 	public $errors = array();
@@ -10,6 +11,7 @@ class user_registration
 			{ $this->register_user(); }
 	}
 	
+	// user registration fucntion
 	private function register_user()
 	{
 		$conn = "";
@@ -18,6 +20,7 @@ class user_registration
 		$password = "1234";
 		$dbname = "justinvuong";
 
+		//if form first all requriements
 		if (preg_match('/^[a-z\d]{2,64}$/i', $_POST['client_username'])
 			&& strlen($_POST['client_email']) <= 64
 			&& filter_var(preg_match('/^[a-z,A-Z,0-9]+@[a-z,A-Z]*(.(com|ca|edu))$/i', $_POST['client_email']))
@@ -28,7 +31,7 @@ class user_registration
 			// if no connection errors (= working database connection)
 			if (!$this->conn->connect_errno)
 			{
-				// escaping, additionally removing everything that could be (html/javascript-) code
+				// escaping, and removing potentially malicious code
 				$client_username = $this->conn->real_escape_string(strip_tags($_POST['client_username'], ENT_QUOTES));
                 $client_email = $this->conn->real_escape_string(strip_tags($_POST['client_email'], ENT_QUOTES));
 				$client_password = $_POST['client_password'];
