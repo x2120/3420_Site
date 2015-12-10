@@ -6,7 +6,7 @@
 			<li class='button'><a href="../Pages/index.php">Home</a></li>
 			<li class='button'><a href="../Pages/register.php">Create Account</a></li>
 			<li class='button'><a href="../Pages/profile.php">Edit Account</a></li>
-			<li class='button'><a href="../Scripts/deleteAccount">Delete Account</a></li>
+			<li class='button'><a href="../PHP/leave.php">Delete Account</a></li>
 			<li class='button'><a href="../Pages/addVid.php">Add Video</a></li>
 			<li class='button'><a href="../Pages/editVid.php">Edit Video</a></li>
 			<li class='button'><a href="../Pages/deleteVid.php">Delete Video</a></li>
