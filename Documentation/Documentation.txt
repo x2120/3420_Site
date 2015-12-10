@@ -7,7 +7,14 @@ Registration is having the same object problem
 Seems fully functional otherwise
 
 Account deletion
+<<<<<<< HEAD
 SAME. PROBLEM. AUGH.
+=======
+Same problem as login. AUGH
+
+Account editing - Non functional
+With registration being the base for editing, and registration not working, it'd be a bit of a stretch to assume editing would work.
+>>>>>>> origin/Assignment_2
 
 Logout - Perfectly functional
 Just destroys the session
@@ -16,8 +23,12 @@ Redirects to index afterwards
 Major problems
 To put it bluntly, Github shit the bed multiple times. Both of us got errors saying we had changed things when we hadn't. It showed us removing things and then readding them exactly as they were, giving us conflicts when we weren't modifying the related files, creating new branches everywhere and then merging them. Everything that could've gone wrong with this DVCS GUI went wrong. I resorted to using the command line and it was alleviated somewhat, but not entirely.
 
+<<<<<<< HEAD
 Another problem we both ran into was the GitHub GUI not updating the repo immediately. It would be pushed by the GIU, but it wouldn't show up on each other's side, or on the project repo in a browser. This slowed us down, and caused havoc with some bits of code. This may have been responsible for some of the conflicts we had, but we're not sure.
 
 The question we couldn't figure out is if this is exclusively part of the GitHub GUI or not. If it is, then we have to strongly recommend to EVERYONE that they stay away from it. If it isn't, then there are two possibilities. Somehow, we broke Git, or git has some serious flaws.
+=======
+Another problem we both ran into was the GitHub GUI not updating the repo immediately. It would be pushed by the GIU, but it wouldn't show up on each other's side, or on the project repo in a browser. This slowed us down, and caused havoc with some bits of code. This may have been responsible for some of the conflicts we had, but we're not sure. The question we couldn't figure out is if this is exclusively part of the GitHub GUI or not. If it is, then we have to strongly recommend to EVERYONE that they stay away from it. If it isn't, then there are two possibilities. Somehow, we broke Git, or git has some serious flaws.
+>>>>>>> origin/Assignment_2
 
 Is our project finished? No, not even close. Are we placing the blame on GitHub? No, but it certainly didn't help.
