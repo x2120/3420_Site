@@ -22,9 +22,6 @@
         <ul>
 			<li>
 			<?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-			//values from addVid.php
 				$servername = "localhost";
 				$username = "justinvuong";
 				$password = "1234";
@@ -41,69 +38,31 @@
 				$Studio=($_GET['Studio']); 
 				$Plot=($_GET['Plot']); 
 				$Storage=($_GET['Storage']);
-=======
-=======
->>>>>>> parent of b198e42... What we could get done
-$servername = "localhost";
-$username = "justinvuong";
-$password = "1234";
-$dbname = "justinvuong";
-$MTitle=($_GET['MTitle']); 
-$MRate=($_GET['Rating']);  
-$Genre=($_GET['Genre']); 
-$SRate=($_GET['SRating']); 
-$Year=($_GET['Year']); 
-$Runtime=($_GET['Runtime']); 
-$TRelease=($_GET['TRelease']); 
-$DRelease=($_GET['DRelease']); 
-$Actors=($_GET['Actors']); 
-$Save=($_GET['AddVideo']); // to upload image  
-$Studio=($_GET['Studio']); 
-$Plot=($_GET['Plot']); 
-$Storage=($_GET['Storage']);
-<<<<<<< HEAD
->>>>>>> parent of b198e42... What we could get done
-=======
->>>>>>> parent of b198e42... What we could get done
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+				// Check connection
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 				// sql to insert into table 																							add cover (upload image)
-				$sql = "INSERT INTO Movie (	title,genre,actors,MPAA,relType,stars,runtime,theatRelease,homeRelease,studio,plot)
-				VALUES ('$MTitle','$Genre','$Actors','$MRate','$Storage','$SRate','$Runtime','$TRelease','$DRelease','$Studio',	'$Plot') "//add cover;
-=======
->>>>>>> parent of b198e42... What we could get done
-=======
->>>>>>> parent of b198e42... What we could get done
+				$sql = "INSERT INTO Movie (	title, 		genre, 		actors, 	MPAA, 		relType, 		stars, 		runtime, 		theatRelease, 		homeRelease, 	studio, 	plot)
+				VALUES (					'$MTitle',	'$Genre',	'$Actors',	'$MRate',	'$Storage',		'$SRate',	'$Runtime',		'$TRelease',		'$DRelease','	$Studio',	'$Plot') "//add cover
+				;
 
+				if ($conn->query($sql) === TRUE) {
+					echo " Successfully added to table!";
+				} else {
+					echo "Error adding to table: " . $conn->error;
+				}
+				// cover
 
-
-
-// sql to insert into table 																							add cover (upload image)
-$sql = "INSERT INTO Movie (	title, 		genre, 		actors, 	MPAA, 		relType, 		stars, 		runtime, 		theatRelease, 		homeRelease, 	studio, 	plot)
-VALUES (					'$MTitle',	'$Genre',	'$Actors',	'$MRate',	'$Storage',		'$SRate',	'$Runtime',		'$TRelease',		'$DRelease','	$Studio',	'$Plot') "//add cover
-;
-
-if ($conn->query($sql) === TRUE) {
-    echo "Successfully added to table!";
-} else {
-    echo "Error adding to table: " . $conn->error;
-}
-// cover
-
-$conn->close();
-?> 
+				$conn->close();
+			?> 
 			</li>
-			
  <!--IMG Upload-->
             <li>
                 <div class = 'box_title'>
@@ -118,7 +77,6 @@ $conn->close();
             <p>
             <!--Buttons-->
 			<input type="submit" value="Upload Image" name="submit">
-			<input type="submit" value="" name="submit">
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>

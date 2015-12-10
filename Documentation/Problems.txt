@@ -1,12 +1,16 @@
-The Login Page Functional:
+Login - somewhat functional
+Login checks database and creates session, but does not instantiate login_script class
+I have no idea why, I even abandoned some of the code I wrote in favour of another method
 
-Create account:
+Registration - nonfunctional
+Registration is having the same object problem
+Seems fully functional otherwise
 
-Edit account:
+Account editing - Non functional
+With registration being the base for editing, and registration not working, it'd be a bit of a stretch to assume editing would work.
 
-
-Delete account:
-	-Can delete account
+Account deletion
+Same problem as login. AUGH
 
 The Main Page:
 	-We can upload images but we can’t link them to the database so we cant properly display images for the index.
@@ -39,3 +43,16 @@ Navigation:
 
 Security:
 	-Complete We have Sql injection
+
+We have been using Github and we ran into some major problems, We could not get the program to sync properly and our files would constantly be overwritten by older versions giving us major problems.
+most of our lost time has been attributed to these problems trying to revert to old projects to get our files back in a working condition.
+
+To put it bluntly, Github shit the bed multiple times. Both of us got errors saying we had changed things when we hadn't. It showed us removing things and then readding them exactly as they were, giving us conflicts when we weren't modifying the related files, creating new branches everywhere and then merging them. Everything that could've gone wrong with this DVCS GUI went wrong. I resorted to using the command line and it was alleviated somewhat, but not entirely.
+
+Another problem we both ran into was the GitHub GUI not updating the repo immediately. It would be pushed by the GIU, but it wouldn't show up on each other's side, or on the project repo in a browser. This slowed us down, and caused havoc with some bits of code. This may have been responsible for some of the conflicts we had, but we're not sure. The question we couldn't figure out is if this is exclusively part of the GitHub GUI or not. If it is, then we have to strongly recommend to EVERYONE that they stay away from it. If it isn't, then there are two possibilities. Somehow, we broke Git, or git has some serious flaws.
+
+Is our project finished? No, not even close. Are we placing the blame on GitHub? No, but it certainly didn't help.
+
+to view the site
+http://frigg.trentu.ca/~justinvuong/3420_Site/Pages/ 
+http://frigg.trentu.ca/~mitchellmiller/3420_Site/Pages/ 

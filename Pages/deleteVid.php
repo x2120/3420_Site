@@ -1,11 +1,11 @@
-<!--searches for video in database to display details-->
+<!--searches in the database for with the movie title -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
 	<link type='text/css' rel='stylesheet' href='../CSS/general.css' />
 	<meta charset="utf-8">
 	<title>Add video</title>
-	<meta name="Movie Details" content="Add video to personal database">
+	<meta name="Delete Video" content="Add video to personal database">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 	?>
 
     <div class = 'right'>
-	<form action= "../Scripts/Details.php" method "post">
+	<form action= "../Scripts/Delete.php" method "post">
         <ul>
             <!--Title of Movie-->
             <li>
@@ -34,7 +34,7 @@
           
             <p>
             <!--Buttons-->
-            <input type="Submit" value ="Search" name="Add Video" />
+            <input type="Submit" value ="Delete Video" name="Add Video" />
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>

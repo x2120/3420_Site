@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Head and meta info -->
+<head>
+	<link type='text/css' rel='stylesheet' href='../CSS/general.css' />
+	<meta charset="utf-8">
+	<title>Edit video</title>
+	<meta name="Edit previous video" content="Edit information for previous video entry">
+</head>
+
+<body>
+<div class='center'>
+
+	<div class="toplogo">
+		<img src = "../Images/movie-reel.jpg" alt="reel" style="width:100px;height:80px;">
+	</div>
+	
+	<div class="tophead">
+		<h1><span ID='logoColor'>MyVid</span> Collection</h1>
+		<p>An individual Video Libary</p><br>
+	</div>
+
+	<!-- Left sidebar and site navigation -->
+	<div class='left'>
+		<br>
+		<ul>
+			<li class='button'><a href="index.html">Home</a></li>
+			<li class='button'><a href="register.html">Create Account</a></li>
+			<li class='button'><a href="profile.html">Edit Account</a></li>
+			<li class='button'><a href="../PHP/leave.php">Delete Account</a></li>
+			<li class='button'><a href="addVid.html">Add Video</a></li>
+			<li class='button'><a href="editVid.html">Edit Video</a></li>
+			<li class='button'><a href="../PHP/deleteVid.php">Delete Video</a></li>
+			<li class='button'><a href="search.html">Search</a></li>
+			<li class='button'><a href="displayDetails.html">Display Details</a></li>
+			<li class='button'><a href="login.html">Login</a></li>
+			<li class='button' ID='inv_button'><a href="../PHP/logout.php">Logout</a></li>
+		</ul>
+	</div>
+
+	<div class = 'right'>
+		<ul>
+			<!--Title of Movie-->
+			<li>
+				<div class = 'box_title'>
+					Title:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="MTitle" />
+				</div>
+			
+			</li>
+			<!--Rating system-->
+			<li>
+				<div class = 'box_title'>
+					Rating: 
+				</div>
+				<div class = 'box_field'>
+					<select name="Rating" onchange="" size="1">
+						<option value="01">1</option>
+						<option value="02">2</option>
+						<option value="03">3</option>
+						<option value="04">4</option>
+						<option value="05">5</option>
+						<option value="06">6</option>
+						<option value="07">7</option>
+						<option value="08">8</option>
+						<option value="09">9</option>
+						<option value="10">10</option>
+					</select>
+				</div>
+			
+			</li>
+			<!--Genre of Movie-->
+			<li>
+				<div class = 'box_title'>
+					Genre:
+				</div>
+				<div class = 'box_field'>
+					<select name="Genre" onchange="" size="1">
+						<option value="01">Action</option>
+						<option value="02">Adventure</option>
+						<option value="03">Animation</option>
+						<option value="04">Comedy</option>
+						<option value="05">Crime</option>
+						<option value="06">Documentary</option>
+						<option value="07">Drama</option>
+						<option value="08">Family</option>
+						<option value="09">Fantasy</option>
+						<option value="10">History</option>
+						<option value="11">Horror</option>
+						<option value="12">Music</option>
+						<option value="13">Mystery</option>
+						<option value="14">Romance</option>
+						<option value="15">Sci-Fi</option>
+						<option value="16">Sport</option>
+						<option value="17">Thriller</option>    
+						<option value="18">War</option> 
+						<option value="19">Western</option> 
+					</select>
+				</div>
+			
+			</li>
+			<li>
+			<!--MPAA Raiting-->
+				<form>
+					<fieldset id = 'mpaa_rating'>
+						<legend> MPAA Rating </legend>
+						<input type="checkbox" name="Rating[]" value ="1" /> G
+						<input type="checkbox" name="Rating[]" value ="2" /> PG
+						<input type="checkbox" name="Rating[]" value ="3" /> PG-13
+						<input type="checkbox" name="Rating[]" value ="4" /> R
+						<input type="checkbox" name="Rating[]" value ="5" /> NC-17
+					</fieldset>
+				</form>
+			</li>			 
+			<!--Year Movie Release-->
+			<li>
+				<div class = 'box_title'>
+					Year:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Year" />
+				</div>      
+			</li>
+			<!--Run Time-->
+			<li>
+				<div class = 'box_title'>
+					Runtime:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Runtime" />
+				</div>    
+			</li>
+			<!--Theater Release-->
+			<li>
+				<div class = 'box_title'>
+					TRelease:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="TRelease" />
+				</div>    
+			</li>
+			<!--DVD-->
+			<li>
+				<div class = 'box_title'>
+					DRelease:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="DRelease" />
+				</div>    
+			</li>
+			<!--Actors-->
+			<li>
+				<div class = 'box_title'>
+					Actors:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Actors" />
+				</div>               
+			</li>
+			<!--IMG Upload-->
+			<li>
+				<div class = 'box_title'>
+					Cover:
+				</div>
+				<div class = 'box_field'>
+					<input type="Button" value ="Choose File" name="save" />
+				</div>    
+			</li>
+			<!--Studio-->
+			<li>
+				<div class = 'box_title'>
+					Studio:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Studio" />
+				</div>    
+			</li>
+			<!--Plot-->
+			<li>
+				<div class = 'box_title'>
+					Plot:
+				</div>
+				<div class = 'box_field'>
+					<input type="text" value ="" name="Plot" />
+				</div>    
+			</li>
+			<!--Video Type-->
+			<li>
+				<form>
+				<fieldset id = 'video_type'>
+					<legend> Video Type </legend>
+					<input type="checkbox" name="VType[]" value ="1" /> DVD
+					<input type="checkbox" name="VType[]" value ="2" /> BluRay
+					<input type="checkbox" name="VType[]" value ="3" /> Digital SD
+					<input type="checkbox" name="VType[]" value ="4" /> Digital HD
+					<input type="checkbox" name="VType[]" value ="5" /> 3D
+				</fieldset>
+				</form>
+			</li>
+		</ul>
+			<!--Buttons-->
+		<input type="Button" value ="Save" name="Add Video" />
+		<input type="RESET" value ="Reset" name="reset" />
+	</div>
+</div>
+</body>
+</html>

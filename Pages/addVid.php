@@ -1,7 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Head and meta info -->
 <head>
+
+	<script type= "text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script type= "text/javascript" src="../Scripts/jquery-ui.js"></script>
+	<script type= "text/javascript" src= "../Scripts/jquery-1.11.3.min.js"></script>
+	<script type= "text/javascript" src= "../Scripts/jquery-ui.min.js"></script>
+	<script type= "text/javascript" src= "../Scripts/jScripts.js"></script>
+	<script type=	"text/javascript"></script>
+	<script src="scripts/jquery.rateit.min.js" language="javascript" type="text/javascript"> </script>
 	<link type='text/css' rel='stylesheet' href='../CSS/general.css' />
+	<link type='text/css' rel='stylesheet' href='../Scripts/jquery-ui.css' />
 	<meta charset="utf-8">
 	<title>Add video</title>
 	<meta name="Add video" content="Add video to personal database">
@@ -19,6 +28,7 @@
     ?>
 
     <div class = 'right'>
+
 	<form action= "../Scripts/insert.php" method "post" enctype="multipart/form-data">
 	
         <ul>
@@ -96,17 +106,7 @@
                     </fieldset>
                 </form>
             </li>			 
-            <!--Year Movie Release-->
-            <li>
-            
-			<div class = 'box_title'>
-                    Year:
-                </div>
-                <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Year" />
-                </div>
-            
-            </li>
+
             <!--Run Time-->
             <li>
                 <div class = 'box_title'>
@@ -116,24 +116,35 @@
                     <input type="textboxes" value ="" name="Runtime" />
                 </div>    
             </li>
-            <!--Theater Release-->
+			
+            <!--Theatrical Release-->
             <li>
                 <div class = 'box_title'>
-                    TRelease:
+                    Theatrical Release:
                 </div>
-                <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="TRelease" />
-                </div>    
+
+					<div class="box_field">
+						<input type="textboxes"  name="TRelease" id="Tdatepicker" placeholder="DD/MM/YYYY"></input> 
+						<div class = 'TError'></div>	 
+					</div>	 
+					
             </li>
-            <!--DVD-->
+			
+			</li>			
+
             <li>
                 <div class = 'box_title'>
-                    DRelease:
+                    DVD Release:
                 </div>
-                <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="DRelease" />
-                </div>    
+
+					<div class="box_field">
+						<input type="textboxes"  name="DRelease" id="Ddatepicker" placeholder="DD/MM/YYYY"></input> 
+						<div class = 'DError'></div>	 
+					</div>	 
+					
             </li>
+			
+			
             <!--Actors-->
             <li>
                 <div class = 'box_title'>
@@ -153,32 +164,40 @@
                     <input type="textboxes" value ="" name="Studio" />
                 </div>    
             </li>
+			
+			
             <!--Plot-->
+			
             <li>
                 <div class = 'box_title'>
                     Plot:
                 </div>
+				
+				
                 <div class = 'box_field'>
-                    <input type="textboxes" value ="" name="Plot" />
+				<textarea id="plot" maxlength="1000" cols="50" rows="5" placeholder="Enter Text"></textarea>
+					<span id="count"></span>
                 </div>    
             </li>
+			
+			
             <!--Video Type-->
             <li>
-                <form>
+                
                 <fieldset id = 'video_type'>
                     <legend> Video Type </legend>
-					    <input type="checkbox" name="type" value ="1" /> DVD
-                        <input type="checkbox" name="type" value ="2" /> BluRay
-                        <input type="checkbox" name="type" value ="3" /> Digital SD
-                        <input type="checkbox" name="type" value ="4" /> Digital HD
-                        <input type="checkbox" name="type" value ="5" /> 3D
+					    <input type="checkbox" name="Vtype" value ="1" /> DVD
+                        <input type="checkbox" name="Vtype" value ="2" /> BluRay
+                        <input type="checkbox" name="Vtype" value ="3" /> Digital SD
+                        <input type="checkbox" name="Vtype" value ="4" /> Digital HD
+                        <input type="checkbox" name="Vtype" value ="5" /> 3D
                 </fieldset>
-                </form>
+                
             </li>
-
+						
             <p>
             <!--Buttons-->
-            <input type="Submit" value ="Save" name="AddVideo" />
+            <input type="Submit" value ="Save" name="AddVideo" onclick="validate()"/>
             <input type="RESET" value ="Reset" name="reset" />
             </p>
         </ul>

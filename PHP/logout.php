@@ -1,6 +1,6 @@
 <?php
 require_once "../Scripts/login_script.php";
-$login = new login_script();
+$login = new Login();
 
 echo "Woot";
 if ($login->login_check() == true)
