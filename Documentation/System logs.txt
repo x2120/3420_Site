@@ -64,6 +64,8 @@ Completed
 	-Genre
 	-Video selector
 	-Staring system
+	
+	https://github.com/x2120/3420_Site/commit/b220b07f24dc773474fd844f6a4f4a3deac416cb
 
 
 

@@ -1,57 +1,10 @@
-Login - somewhat functional
-Login checks database and creates session, but does not instantiate login_script class
-I have no idea why, I even abandoned some of the code I wrote in favour of another method
+Everything should be operational
 
-Registration - nonfunctional
-Registration is having the same object problem
-Seems fully functional otherwise
+Only problem that we have is with the error message under Theater realease and Dvd realease there is an HTML error message built in but if that fails there also is an javascript error message
 
-Account editing - Non functional
-With registration being the base for editing, and registration not working, it'd be a bit of a stretch to assume editing would work.
+We had a few troubles getting the files on the site but it worked in the end
 
-Account deletion
-Same problem as login. AUGH
-
-The Main Page:
-	-We can upload images but we can’t link them to the database so we cant properly display images for the index.
-
-
-The Add Page:
-	-We can successfully add Movies to the database but we cannot upload images. (Can upload to server but could didn’t have the time to link them in the database)
-
-Edit Page:
-	-Can fully edit all values in the database but same problem as before, we cannot upload images (can upload to server but could didn’t have the time to link them in the database)
-
-
-The Display Details Page:
-	-Can display details of a searched page but cannot View images (can upload to server but could didn’t have the time to link them in the database)
-
-
-The Delete Video
-	-Page Can delete from database but cannot delete files from Image folder.
-
-The Search Page
-	-None we don’t have a working search page
-
-The Logout Page:
-	-Functional
-
-Genre List 
-	-N/A 
-
-Navigation: 
-
-Security:
-	-Complete We have Sql injection
-
-We have been using Github and we ran into some major problems, We could not get the program to sync properly and our files would constantly be overwritten by older versions giving us major problems.
-most of our lost time has been attributed to these problems trying to revert to old projects to get our files back in a working condition.
-
-To put it bluntly, Github shit the bed multiple times. Both of us got errors saying we had changed things when we hadn't. It showed us removing things and then readding them exactly as they were, giving us conflicts when we weren't modifying the related files, creating new branches everywhere and then merging them. Everything that could've gone wrong with this DVCS GUI went wrong. I resorted to using the command line and it was alleviated somewhat, but not entirely.
-
-Another problem we both ran into was the GitHub GUI not updating the repo immediately. It would be pushed by the GIU, but it wouldn't show up on each other's side, or on the project repo in a browser. This slowed us down, and caused havoc with some bits of code. This may have been responsible for some of the conflicts we had, but we're not sure. The question we couldn't figure out is if this is exclusively part of the GitHub GUI or not. If it is, then we have to strongly recommend to EVERYONE that they stay away from it. If it isn't, then there are two possibilities. Somehow, we broke Git, or git has some serious flaws.
-
-Is our project finished? No, not even close. Are we placing the blame on GitHub? No, but it certainly didn't help.
+Would like to clean up the code abit more but ran out of time
 
 to view the site
 http://frigg.trentu.ca/~justinvuong/3420_Site/Pages/ 
