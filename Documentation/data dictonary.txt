@@ -1,44 +1,49 @@
+Add Video
 Data Dictonary
 
 Mtitle
 	movie title
-	no functionality yet, will add with PHP segment of assignment
+	Reports if there is no title
 
 Rating
-	movie enjoyability rating
-	equivalent to star rating
+	Gives A star rating 
 
 mpaa
-	movie rating from american MPAA 
-	suitability for audiences
-
-year
-	year released
+	Makes sure that at least 1 rating is given 
 
 RTime
 	running time of movie
 
 TRelease
-	theatrical release
+	Has a date selector
+	Makes sure the date is properly formatted 
 
 DRelease
-	DVD release
+	Has a date selector
+	Makes sure the date is properly formatted 
 
 Actors
-	major actors
+	major actors 
 
 Studio 
 	major studio attached to project
 
 Plot
 	plot synopsis
+	gives a character count
+	gives a character limit
 
 Save
 	Save current form, update relevant SQL table
+	checks if everything is valid before submiting
 
 Reset
 	Reset form to blank
 
+	
+	
+	
+	
 username
 	screen name for user
 	used for login pruposes

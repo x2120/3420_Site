@@ -1,3 +1,5 @@
+_________________________________________________
+Assignment 1
 logs
 September 23 2015
 1)-Original File creation	
@@ -35,6 +37,33 @@ October 13 2015
 2) Search window functionality added
 3) Final edits
 
+_________________________________________________
+_________________________________________________
+Assignment 2
+N/A
+_________________________________________________
+_________________________________________________
+
+Assignment 3
+
+We finished the project in 3 days because of other work that we had.
+
+Dec  8 
+Research in Perpetration
+
+Dec 9
+Completed 
+	-Title html
+	-DVD & Theater date
+	-Plot summary
+	-Date selector
+	
+Dec 10th
+Completed
+	-MPAA
+	-Genre
+	-Video selector
+	-Staring system
 
 
-https://github.com/mitchell271/3420_Site/commits/master
+

@@ -237,3 +237,15 @@ li > label {
 	margin-left: 38px;
 	padding-bottom: 10px;
 }
+
+/*----------------------------------------------------------
+Error Messages
+----------------------------------------------------------*/
+
+.InitError {
+  visibility: hidden;
+}
+
+.Error {
+  visibility: visible;
+}

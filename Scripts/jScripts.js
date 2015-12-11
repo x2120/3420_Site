@@ -1,60 +1,81 @@
-window.onload=Initialisation; //when the whole page loads is when this code is run, instead of before it loads as js usually does.
+window.onload=load; //Load on run 
 	
 
-function Initialisation() 
+function load() 
 {
 	//word counter
 	var elem = $("#count") ;
 	$("#plot").limiter(1000, elem);
-	
-	// Theatrical Validator
-	var TValid = $('input[name=TRelease').val();
-	if(TValid != null)
-	{
-		//Checks if the date is a valid format
-		if(!(/^(\d{2})[-\/](\d{2})[-\/](\d{4})$/.test(TValid)))
-			{
-				$('<div class = "TError">Error!</div>	 ').appendTo('.TError');
-				valid=false;
-			}
-		else{$('<div class = "TError">Valid!</div>	 ').appendTo('.TError');}
-	}return valid;
-	
-	
-	// DVD validator
-	var DValid = $('input[name=DRelease').val();
-	if(DValid != null)
-	{
-	//Checks if the date is a valid format
-		if(!(/^(\d{2})[-\/](\d{2})[-\/](\d{4})$/.test(DValid)))
-			{
-				$('<div class = "DError">Error!</div>	 ').appendTo('.DError');
-				valid=false;
-			}
-		else{$('<div class = "DError">Valid!</div>	 ').appendTo('.DError');}
-	}return valid;
-	
-	//checks if 
-	var Vtype = $('input[name=Vtype]:checked').val();
-	if(Vtype == null || Vtype== "")
-	{
-		valid=false;
-		alert("You need to select a Video Type!")
-	//no error anymore = remove span
-	}
-	else
-	{ 
-		return valid;
-	} 
-	
+	$( "#Ddatepicker" ).datepicker();
+	$( "#Tdatepicker" ).datepicker();
 }
 
-//date picker (calendar)
-$(function() 
-{ 
-  $( "#Ddatepicker" ).datepicker();
-  $( "#Tdatepicker" ).datepicker();
+
+$(document).ready(function(){
+	// initialise rating system
+	
+	// activates on 'submit' button
+	$('form').submit(function(e){
+		// error divs
+		var MPAAError = '<div class="MPAAError">Please assign a rating</div>'
+		var TypeError = '<div class="TypeError">Please assign a video type</div>'
+		var DValid = $('input[name=DRelease').val();
+		var TValid = $('input[name=TRelease').val();
+		
+		// if no title, gives message and prevents submission
+		if($('#title').val() == ''){
+				$('#TReleaseError').removeClass('InitError');
+				$('#TReleaseError').addClass('Error');
+				e.preventDefault();
+			}
+		else if(!$('#title').val() == ''){
+				$('#TReleaseError').removeClass('Error');
+				$('#TReleaseError').addClass('InitError');
+		}
+		
+		if(DValid != null){
+		//Checks if the date is a valid format
+		if(!(/^(\d{2})[-\/](\d{2})[-\/](\d{4})$/.test(DValid))){
+				valid=false;
+				//this is only if the html error catcher fails
+				alert("You need to give a DVD release date!")
+			}
+		else {/*nothing*/}
+		}
+		
+		if(TValid != null){
+		//Checks if the date is a valid format
+		if(!(/^(\d{2})[-\/](\d{2})[-\/](\d{4})$/.test(TValid))){
+				valid=false;
+				//this is only if the html error catcher fails
+				alert("You need to give a theatrical release date!")
+			}
+		else{}
+		}
+		
+		// if no MPAA rating, gives message and prevents submission
+		if(!$('input[name="Rating"]:checked').val()){
+			$('.MPAAError').remove();
+				$('#mpaa_rating').append(MPAAError);
+				e.preventDefault();
+			}
+		else if($("input[name='Rating']:checked").val()){
+			$('.MPAAError').remove();
+		}
+		
+		// if no genre, gives message and prevents submission
+		if($("#video_type input:checked").length === 0){
+			$('.TypeError').remove();
+				$('#video_type').append(TypeError);
+				e.preventDefault();
+		}
+		else{
+		   $('.TypeError').remove();
+		}
+	});
 });
+
+
 
 //
 
